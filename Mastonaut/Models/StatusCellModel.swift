@@ -91,13 +91,13 @@ class StatusCellModel: NSObject
 	{
 		if status.pinned == true
 		{
-			contextIcon = #imageLiteral(resourceName: "thumbtack")
+			contextIcon = .init(systemSymbolName: "pin", accessibilityDescription: nil) ?? #imageLiteral(resourceName: "thumbtack")
 			button.set(stringValue: 🔠("status.context.pinned"), applyingAttributes: attributes, applyingEmojis: [])
 			button.isEnabled = false
 		}
 		else if status.reblog != nil
 		{
-			contextIcon = #imageLiteral(resourceName: "retooted")
+			contextIcon = .init(systemSymbolName: "arrow.2.squarepath", accessibilityDescription: nil) ?? #imageLiteral(resourceName: "retooted")
 			button.set(stringValue: 🔠("status.context.boost", agent.bestDisplayName),
 					   applyingAttributes: attributes,
 					   applyingEmojis: agent.cacheableEmojis)
@@ -105,13 +105,13 @@ class StatusCellModel: NSObject
 		}
 		else if status.inReplyToAccountID == status.account.id
 		{
-			contextIcon = #imageLiteral(resourceName: "thread")
+			contextIcon = .init(systemSymbolName: "rectangle.and.pencil.and.ellipsis", accessibilityDescription: nil) ?? #imageLiteral(resourceName: "thread")
 			button.set(stringValue: 🔠("status.context.thread"), applyingAttributes: attributes, applyingEmojis: [])
 			button.isEnabled = true
 		}
 		else if status.inReplyToID != nil
 		{
-			contextIcon = #imageLiteral(resourceName: "replied")
+			contextIcon = .init(systemSymbolName: "arrowshape.turn.up.backward", accessibilityDescription: nil) ?? #imageLiteral(resourceName: "replied")
 			button.set(stringValue: 🔠("status.context.reply"), applyingAttributes: attributes, applyingEmojis: [])
 			button.isEnabled = true
 		}

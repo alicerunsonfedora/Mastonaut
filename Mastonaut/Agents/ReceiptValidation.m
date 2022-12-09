@@ -38,7 +38,7 @@
 
 #import <IOKit/IOKitLib.h>
 
-static NSString *kBPNBundleID = @"app.mastonaut.mac";
+static NSString *kBPNBundleID = @"net.marquiskurt.mastonaut.mac";
 static NSString *kBPBundleVersion = @BUNDLE_VERSION;
 static NSString *kBPPreviousPublicVersion = @"1.3.5";
 

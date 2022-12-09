@@ -26,10 +26,10 @@ public extension Visibility
 	{
 		switch self
 		{
-		case .public: return NSImage.CoreTootin.globe
-		case .unlisted: return NSImage.CoreTootin.padlock_open
-		case .private: return NSImage.CoreTootin.padlock
-		case .direct: return NSImage.CoreTootin.envelope
+		case .public: return .init(systemSymbolName: "globe.europe.africa.fill", accessibilityDescription: nil) ?? NSImage.CoreTootin.globe
+		case .unlisted: return .init(systemSymbolName: "lock.open", accessibilityDescription: nil) ?? NSImage.CoreTootin.padlock_open
+		case .private: return .init(systemSymbolName: "lock", accessibilityDescription: nil) ?? NSImage.CoreTootin.padlock
+		case .direct: return .init(systemSymbolName: "envelope", accessibilityDescription: nil) ?? NSImage.CoreTootin.envelope
 		}
 	}
 

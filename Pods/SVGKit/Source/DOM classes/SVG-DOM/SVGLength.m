@@ -4,6 +4,7 @@
 #import "CSSPrimitiveValue_ConfigurablePixelsPerInch.h"
 
 #import "SVGUtils.h"
+#import "SVGKDefine_Private.h"
 
 #include <sys/types.h>
 #include <sys/sysctl.h>
@@ -209,7 +210,8 @@ static float cachedDevicePixelsPerInch;
 	|| [platform hasPrefix:@"iPad5,3"]
     || [platform hasPrefix:@"iPad5,4"]
 	|| [platform hasPrefix:@"iPad6"]
-    || [platform hasPrefix:@"iPad7"])
+    || [platform hasPrefix:@"iPad7"]
+    || [platform hasPrefix:@"iPad8"])
 		return 264.0f;
     
 	if( [platform hasPrefix:@"iPad"]) // catch-all for higher-end devices not yet existing
@@ -233,7 +235,7 @@ static float cachedDevicePixelsPerInch;
 		return 132.0f; // Simulator, running on desktop machine
 	}
 	
-	//NSAssert(FALSE, @"Cannot determine the PPI values for current device; returning 0.0f - hopefully this will crash your code (you CANNOT run SVG's that use CM/IN/MM etc until you fix this)" );
+	NSAssert(FALSE, @"Cannot determine the PPI values for current device; returning 0.0f - hopefully this will crash your code (you CANNOT run SVG's that use CM/IN/MM etc until you fix this)" );
 	return 0.0f; // Bet you'll get a divide by zero here...
 }
 

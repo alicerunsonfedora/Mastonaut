@@ -234,9 +234,9 @@ extension Visibility
 	{
 		switch self
 		{
-		case .public, .unlisted:	return #imageLiteral(resourceName: "retoot")
-		case .private:				return #imageLiteral(resourceName: "private")
-		case .direct:				return #imageLiteral(resourceName: "direct")
+		case .public, .unlisted:	return .init(systemSymbolName: "arrow.triangle.2.circle.fill", accessibilityDescription: nil) ?? #imageLiteral(resourceName: "retoot")
+		case .private:				return .init(systemSymbolName: "lock", accessibilityDescription: nil) ?? #imageLiteral(resourceName: "private")
+		case .direct:				return .init(systemSymbolName: "envelope", accessibilityDescription: nil) ?? #imageLiteral(resourceName: "direct")
 		}
 	}
 

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -50,8 +51,10 @@
                     </textFieldCell>
                 </textField>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TUa-TX-ItA">
-                    <rect key="frame" x="51" y="76" width="15" height="12"/>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="followed" id="i0H-DY-w3g"/>
+                    <rect key="frame" x="49" y="73" width="17" height="16"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="i0H-DY-w3g">
+                        <imageReference key="image" image="person.badge.plus" catalog="system" symbolScale="medium"/>
+                    </imageCell>
                 </imageView>
                 <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="751" verticalHuggingPriority="751" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nUv-6e-b4l">
                     <rect key="frame" x="74" y="12" width="240" height="36"/>
@@ -124,7 +127,7 @@
         </tableCellView>
     </objects>
     <resources>
-        <image name="followed" width="15" height="12"/>
         <image name="missing" width="400" height="400"/>
+        <image name="person.badge.plus" catalog="system" width="17" height="16"/>
     </resources>
 </document>

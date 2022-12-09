@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17154" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="1kO-JB-WGR">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="1kO-JB-WGR">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -10,7 +10,7 @@
         <scene sceneID="8E9-fA-2g2">
             <objects>
                 <windowController id="1kO-JB-WGR" customClass="TimelinesWindowController" customModule="Mastonaut" customModuleProvider="target" sceneMemberID="viewController">
-                    <window key="window" identifier="Timelines" title="Mastonaut — No Account Selected" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" animationBehavior="documentWindow" frameAutosaveName="" tabbingMode="disallowed" titleVisibility="hidden" id="yb1-gA-2HP" customClass="ToolbarWindow" customModule="Mastonaut" customModuleProvider="target">
+                    <window key="window" identifier="Timelines" title="Mastonaut" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" animationBehavior="documentWindow" frameAutosaveName="" tabbingMode="disallowed" toolbarStyle="unified" titleVisibility="hidden" id="yb1-gA-2HP" customClass="ToolbarWindow" customModule="Mastonaut" customModuleProvider="target">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowCollectionBehavior key="collectionBehavior" participatesInCycle="YES" fullScreenPrimary="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>

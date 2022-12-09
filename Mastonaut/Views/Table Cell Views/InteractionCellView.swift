@@ -109,7 +109,11 @@ class InteractionCellView: MastonautTableCellView, NotificationDisplaying
 			switch notificationType
 			{
 			case .reblog:
-				interactionIcon.image = emphasized ? #imageLiteral(resourceName: "retooted") : #imageLiteral(resourceName: "retooted_active")
+				interactionIcon.image = emphasized ?
+					.init(systemSymbolName: "arrow.2.circlepath.circle", accessibilityDescription: nil):
+					.init(systemSymbolName: "arrow.2.circlepath.circle.fill", accessibilityDescription: nil)?
+						.withSymbolConfiguration(.preferringMulticolor())
+
 				
 			case .favourite:
 				interactionIcon.image = emphasized ? #imageLiteral(resourceName: "favorited") : #imageLiteral(resourceName: "favorited_active")

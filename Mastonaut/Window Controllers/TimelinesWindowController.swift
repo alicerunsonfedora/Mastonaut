@@ -102,10 +102,10 @@ class TimelinesWindowController: NSWindowController, UserPopUpButtonDisplaying, 
 
 				if let window = self.window {
 					if let instance = currentAccount.baseDomain {
-						window.title = "@\(currentAccount.username!) — \(instance)"
+						window.subtitle = "@\(currentAccount.username!) — \(instance)"
 					}
 					else {
-						window.title = "@\(currentAccount.username!)"
+						window.subtitle = "@\(currentAccount.username!)"
 					}
 				}
 
@@ -131,9 +131,10 @@ class TimelinesWindowController: NSWindowController, UserPopUpButtonDisplaying, 
 				accountObservations.removeAll()
 				sidebarSubcontroller.uninstallSidebar()
 				installPlaceholder()
-				window?.title = 🔠("Mastonaut — No Account Selected")
+				window?.subtitle = "No Account Selected"
 			}
 
+			window?.title = 🔠("Mastonaut")
 			statusComposerSegmentedControl.isHidden = !hasUser
 			newColumnSegmentedControl.isHidden = !hasUser
 			timelinesViewController.columnViewControllers.forEach({ columnPopUpButtonMap.object(forKey: $0)?.isHidden = !hasUser })
@@ -260,11 +261,14 @@ class TimelinesWindowController: NSWindowController, UserPopUpButtonDisplaying, 
 		updateUserPopUpButton()
 	}
 
+	// MARK: Window Did Load
+
 	override func windowDidLoad() {
 		super.windowDidLoad()
 
 		shouldCascadeWindows = true
 
+		window?.toolbarStyle = .unifiedCompact
 		window?.restorationClass = TimelinesWindowRestoration.self
 
 		newColumnSegmentedControl.setMenu(newColumnMenu, forSegment: 0)
@@ -1038,8 +1042,12 @@ extension TimelinesWindowController: AccountsMenuProvider {
 
 private extension TimelinesWindowController {
 	func makeCloseSidebarButton() -> NSSegmentedControl {
-		let button = NSSegmentedControl(images: [#imageLiteral(resourceName: "close_sidebar")], trackingMode: .momentary,
-										target: self, action: #selector(dismissSidebar(_:)))
+		let button = NSSegmentedControl(
+			images: [ .init(systemSymbolName: "xmark", accessibilityDescription: nil) ?? #imageLiteral(resourceName: "close_sidebar")],
+			trackingMode: .momentary,
+			target: self,
+			action: #selector(dismissSidebar(_:))
+		)
 		button.translatesAutoresizingMaskIntoConstraints = false
 		return button
 	}
@@ -1060,15 +1068,23 @@ private extension TimelinesWindowController {
 	}
 
 	static func makeNewColumnSegmentedControl() -> NSSegmentedControl {
-		let segmentedControl = NSSegmentedControl(images: [#imageLiteral(resourceName: "add_panel")], trackingMode: .momentary,
-												  target: nil, action: #selector(addColumnMode(_:)))
+		let segmentedControl = NSSegmentedControl(
+			images: [.init(systemSymbolName: "plus.rectangle.portrait", accessibilityDescription: nil) ?? #imageLiteral(resourceName: "add_panel")],
+			trackingMode: .momentary,
+			target: nil,
+			action: #selector(addColumnMode(_:))
+		)
 		segmentedControl.translatesAutoresizingMaskIntoConstraints = false
 		return segmentedControl
 	}
 
 	static func makeStatusComposerSegmentedControl() -> NSSegmentedControl {
-		let segmentedControl = NSSegmentedControl(images: [#imageLiteral(resourceName: "compose")], trackingMode: .momentary,
-												  target: nil, action: #selector(composeStatus(_:)))
+		let segmentedControl = NSSegmentedControl(
+			images: [.init(systemSymbolName: "square.and.pencil", accessibilityDescription: nil) ?? #imageLiteral(resourceName: "compose")],
+			trackingMode: .momentary,
+			target: nil,
+			action: #selector(composeStatus(_:))
+		)
 		segmentedControl.translatesAutoresizingMaskIntoConstraints = false
 		return segmentedControl
 	}

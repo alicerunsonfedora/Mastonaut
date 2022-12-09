@@ -32,14 +32,14 @@ class FocusedStatusTableCellView: StatusTableCellView
 	]
 
 	private static let _statusLabelAttributes: [NSAttributedString.Key: AnyObject] = [
-		.foregroundColor: NSColor.labelColor, .font: NSFont.labelFont(ofSize: 16),
+		.foregroundColor: NSColor.labelColor, .font: NSFont.preferredFont(forTextStyle: .body),
 		.underlineStyle: NSNumber(value: 0) // <-- This is a hack to prevent the label's contents from shifting
 		// vertically when clicked.
 	]
 
 	private static let _statusLabelLinkAttributes: [NSAttributedString.Key: AnyObject] = [
 		.foregroundColor: NSColor.safeControlTintColor,
-		.font: NSFont.systemFont(ofSize: 16, weight: .medium),
+		.font: NSFont.preferredFont(forTextStyle: .body),
 		.underlineStyle: NSNumber(value: 1)
 	]
 

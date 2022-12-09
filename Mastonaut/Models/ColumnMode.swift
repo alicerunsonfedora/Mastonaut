@@ -93,23 +93,23 @@ enum ColumnMode: RawRepresentable, ColumnModel, Equatable, Comparable
 		{
 		case .timeline:
 			menuItem.title = 🔠("Home")
-			menuItem.image = #imageLiteral(resourceName: "home")
+			menuItem.image = .init(systemSymbolName: "house", accessibilityDescription: nil) ?? #imageLiteral(resourceName: "home")
 
 		case .localTimeline:
 			menuItem.title = 🔠("Local Timeline")
-			menuItem.image = #imageLiteral(resourceName: "group")
+			menuItem.image = .init(systemSymbolName: "person.3", accessibilityDescription: nil) ?? #imageLiteral(resourceName: "group")
 
 		case .publicTimeline:
 			menuItem.title = 🔠("Public Timeline")
-			menuItem.image = NSImage.CoreTootin.globe
+			menuItem.image = .init(systemSymbolName: "globe.europe.africa.fill", accessibilityDescription: nil) ?? NSImage.CoreTootin.globe
 
 		case .notifications:
 			menuItem.title = 🔠("Notifications")
-			menuItem.image = #imageLiteral(resourceName: "bell")
+			menuItem.image = .init(systemSymbolName: "bell.badge", accessibilityDescription: nil) ?? #imageLiteral(resourceName: "bell")
 
 		case .tag(let name):
 			menuItem.title = 🔠("Tag: %@", name)
-			menuItem.image = #imageLiteral(resourceName: "bell")
+			menuItem.image = .init(systemSymbolName: "bell.badge", accessibilityDescription: nil) ?? #imageLiteral(resourceName: "bell")
 		}
 
 		return menuItem

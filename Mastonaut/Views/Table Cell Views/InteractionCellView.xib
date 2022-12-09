@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16097" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -50,7 +51,7 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="cW1-Jf-RNF" customClass="RefreshingFormattedTextField" customModule="Mastonaut" customModuleProvider="target">
-                    <rect key="frame" x="256" y="13" width="62" height="14"/>
+                    <rect key="frame" x="256" y="16" width="62" height="14"/>
                     <textFieldCell key="cell" lineBreakMode="truncatingTail" alignment="right" title="Somewhen" id="bzh-lq-VPW">
                         <font key="font" metaFont="controlContent" size="11"/>
                         <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -170,47 +171,52 @@
                     </customSpacing>
                 </stackView>
                 <button toolTip="Reply to this toot" verticalHuggingPriority="1" alphaValue="0.84999999999999998" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="37b-yO-ce8">
-                    <rect key="frame" x="78" y="12" width="16" height="15"/>
+                    <rect key="frame" x="78" y="10" width="17" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="15" id="jpJ-lO-4ac"/>
                     </constraints>
-                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="reply" imagePosition="only" alignment="center" inset="2" id="n4E-QS-f0p">
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" inset="2" id="n4E-QS-f0p">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="controlContent" size="11"/>
+                        <imageReference key="image" image="arrowshape.turn.up.left" catalog="system" symbolScale="medium"/>
                     </buttonCell>
                     <connections>
                         <action selector="interactionButtonClicked:" target="uA5-gi-A8Y" id="P5A-E8-bEr"/>
                     </connections>
                 </button>
                 <button toolTip="Boost this toot" alphaValue="0.84999999999999998" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S0C-0l-7dv">
-                    <rect key="frame" x="104" y="12" width="17" height="15"/>
-                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="retoot" imagePosition="only" alignment="center" alternateImage="retoot_active" inset="2" id="Cjv-gF-Rm5">
+                    <rect key="frame" x="105" y="15" width="15" height="15"/>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" inset="2" id="Cjv-gF-Rm5">
                         <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                         <font key="font" metaFont="controlContent" size="11"/>
+                        <imageReference key="image" image="arrow.triangle.2.circlepath.circle" catalog="system" symbolScale="medium"/>
+                        <imageReference key="alternateImage" image="arrow.triangle.2.circlepath.circle.fill" catalog="system" symbolScale="medium" renderingMode="original"/>
                     </buttonCell>
                     <connections>
                         <action selector="interactionButtonClicked:" target="uA5-gi-A8Y" id="7qd-Pt-cCx"/>
                     </connections>
                 </button>
                 <button toolTip="Favorite this toot" alphaValue="0.84999999999999998" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j5Z-f1-HO8">
-                    <rect key="frame" x="131" y="12" width="15" height="15"/>
-                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="star" imagePosition="only" alignment="center" alternateImage="star_active" inset="2" id="E73-dV-UCR">
+                    <rect key="frame" x="130" y="15" width="17" height="16"/>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" inset="2" id="E73-dV-UCR">
                         <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                         <font key="font" metaFont="controlContent" size="11"/>
+                        <imageReference key="image" image="star" catalog="system" symbolScale="medium"/>
+                        <imageReference key="alternateImage" image="star.fill" catalog="system" symbolScale="medium" renderingMode="original"/>
                     </buttonCell>
                     <connections>
                         <action selector="interactionButtonClicked:" target="uA5-gi-A8Y" id="7YR-la-DAI"/>
                     </connections>
                 </button>
                 <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="12" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="1000" verticalHuggingPriority="1000" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SsG-u2-jcM">
-                    <rect key="frame" x="50" y="156" width="188" height="20"/>
+                    <rect key="frame" x="44" y="156" width="194" height="20"/>
                     <subviews>
                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="npy-Dl-32e">
-                            <rect key="frame" x="0.0" y="0.0" width="14" height="20"/>
-                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="retooted" id="47Z-Er-6Bg"/>
+                            <rect key="frame" x="0.0" y="-2" width="20" height="25"/>
+                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="arrow.2.squarepath" catalog="system" id="47Z-Er-6Bg"/>
                         </imageView>
                         <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="4" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="248.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1aE-KA-sFf">
-                            <rect key="frame" x="26" y="0.0" width="162" height="20"/>
+                            <rect key="frame" x="32" y="0.0" width="162" height="20"/>
                             <subviews>
                                 <customView wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PDL-QG-cFf" customClass="BorderView" customModule="CoreTootin">
                                     <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -275,7 +281,7 @@
                     </customSpacing>
                 </stackView>
                 <button verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="XOW-dd-yLi">
-                    <rect key="frame" x="76" y="132" width="113" height="16"/>
+                    <rect key="frame" x="76" y="132" width="114" height="16"/>
                     <buttonCell key="cell" type="smallSquare" title="Steve Applebaum" bezelStyle="smallSquare" imagePosition="overlaps" alignment="left" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="QJe-R5-jKf">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="systemMedium" size="13"/>
@@ -335,13 +341,13 @@
         </tableCellView>
     </objects>
     <resources>
+        <image name="arrow.2.squarepath" catalog="system" width="20" height="14"/>
+        <image name="arrow.triangle.2.circlepath.circle" catalog="system" width="15" height="15"/>
+        <image name="arrow.triangle.2.circlepath.circle.fill" catalog="system" width="15" height="15"/>
+        <image name="arrowshape.turn.up.left" catalog="system" width="17" height="14"/>
         <image name="attachment" width="9" height="9"/>
         <image name="missing" width="400" height="400"/>
-        <image name="reply" width="16" height="15"/>
-        <image name="retoot" width="17" height="15"/>
-        <image name="retoot_active" width="17" height="15"/>
-        <image name="retooted" width="14" height="9"/>
-        <image name="star" width="15" height="15"/>
-        <image name="star_active" width="15" height="15"/>
+        <image name="star" catalog="system" width="17" height="16"/>
+        <image name="star.fill" catalog="system" width="17" height="16"/>
     </resources>
 </document>

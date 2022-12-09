@@ -27,7 +27,7 @@ public class MastonautPreferences: PreferencesController
 
 	override var suiteName: String?
 	{
-		return "R85D3K8ATT.app.mastonaut.mac"
+		return "FQQXSP79X3.net.marquiskurt.mastonaut.mac"
 	}
 
 	/// Initializer declared as private to avoid accidental creation of new instances.
