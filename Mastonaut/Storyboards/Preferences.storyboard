@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -285,8 +286,10 @@
                                                 </textFieldCell>
                                             </textField>
                                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zyu-z6-bKm">
-                                                <rect key="frame" x="220" y="7" width="20" height="15"/>
-                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="sensitive_show" id="kf2-W2-SbT"/>
+                                                <rect key="frame" x="214" y="6" width="26.5" height="17"/>
+                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="kf2-W2-SbT">
+                                                    <imageReference key="image" image="eye" catalog="system" symbolScale="large"/>
+                                                </imageCell>
                                             </imageView>
                                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H7b-dz-7ds">
                                                 <rect key="frame" x="252" y="36" width="378" height="62"/>
@@ -361,8 +364,10 @@
                                                 </textFieldCell>
                                             </textField>
                                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qks-7V-Z0g">
-                                                <rect key="frame" x="223" y="7" width="17" height="15"/>
-                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="warning" id="bbD-wp-JBK"/>
+                                                <rect key="frame" x="219" y="5.5" width="21.5" height="19"/>
+                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="bbD-wp-JBK">
+                                                    <imageReference key="image" image="exclamationmark.triangle" catalog="system" symbolScale="large"/>
+                                                </imageCell>
                                             </imageView>
                                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IGk-De-bCI">
                                                 <rect key="frame" x="252" y="36" width="378" height="62"/>
@@ -773,7 +778,7 @@
                                         </connections>
                                     </button>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FXi-Hs-RiW">
-                                        <rect key="frame" x="105" y="2" width="118" height="18"/>
+                                        <rect key="frame" x="106" y="2" width="117" height="18"/>
                                         <subviews>
                                             <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="SzM-sc-ytR">
                                                 <rect key="frame" x="0.0" y="2" width="16" height="16"/>
@@ -798,7 +803,7 @@
                                                 </connections>
                                             </button>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="78X-L2-8l3">
-                                                <rect key="frame" x="80" y="0.0" width="38" height="18"/>
+                                                <rect key="frame" x="80" y="0.0" width="37" height="18"/>
                                                 <buttonCell key="cell" type="inline" title="Save" bezelStyle="inline" alignment="center" borderStyle="border" inset="2" id="0WO-Jw-91Y">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="smallSystemBold"/>
@@ -856,13 +861,13 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <customView translatesAutoresizingMaskIntoConstraints="NO" id="znn-OB-8wm">
-                                            <rect key="frame" x="134" y="107" width="118" height="84"/>
+                                            <rect key="frame" x="135" y="107" width="117" height="84"/>
                                             <subviews>
                                                 <stackView distribution="fill" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yjp-jK-tRK">
-                                                    <rect key="frame" x="20" y="20" width="78" height="44"/>
+                                                    <rect key="frame" x="20" y="20" width="77" height="44"/>
                                                     <subviews>
                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0cK-Iv-ebj">
-                                                            <rect key="frame" x="12" y="28" width="54" height="16"/>
+                                                            <rect key="frame" x="11" y="28" width="54" height="16"/>
                                                             <textFieldCell key="cell" lineBreakMode="clipping" id="4hy-xb-0b9">
                                                                 <font key="font" usesAppearanceFont="YES"/>
                                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -870,7 +875,7 @@
                                                             </textFieldCell>
                                                         </textField>
                                                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ijw-Sh-fCw">
-                                                            <rect key="frame" x="-7" y="-7" width="92" height="32"/>
+                                                            <rect key="frame" x="-7" y="-7" width="91" height="32"/>
                                                             <buttonCell key="cell" type="push" title="Try Again" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="RDE-od-0ml">
                                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                 <font key="font" metaFont="system"/>
@@ -975,11 +980,11 @@
                                                     </textFieldCell>
                                                 </textField>
                                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p1O-Ms-Pnf">
-                                                    <rect key="frame" x="17" y="10" width="14" height="14"/>
-                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="info_small" id="Mif-t7-Uga"/>
+                                                    <rect key="frame" x="17" y="10" width="15" height="15"/>
+                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="info.circle" catalog="system" id="Mif-t7-Uga"/>
                                                 </imageView>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="27w-fo-Xsc">
-                                                    <rect key="frame" x="35" y="10" width="339" height="14"/>
+                                                    <rect key="frame" x="36" y="10" width="339" height="14"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Click – or drop an image – into the wells to upload a new image." id="ka0-2P-FIZ">
                                                         <font key="font" metaFont="message" size="11"/>
                                                         <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -1077,7 +1082,7 @@
                                                         </binding>
                                                     </connections>
                                                 </textField>
-                                                <box boxType="secondary" borderType="line" title="Metadata" translatesAutoresizingMaskIntoConstraints="NO" id="8wX-ha-atX">
+                                                <box borderType="line" title="Metadata" translatesAutoresizingMaskIntoConstraints="NO" id="8wX-ha-atX">
                                                     <rect key="frame" x="14" y="10" width="354" height="153"/>
                                                     <view key="contentView" id="Lub-TF-1IW">
                                                         <rect key="frame" x="4" y="5" width="346" height="133"/>
@@ -1104,7 +1109,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BPq-yP-V3L">
-                                                                <rect key="frame" x="120" y="100" width="216" height="21"/>
+                                                                <rect key="frame" x="120" y="100" width="214" height="21"/>
                                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="vs6-HP-ZtI">
                                                                     <font key="font" metaFont="system"/>
                                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -1140,7 +1145,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NRd-j8-TvP">
-                                                                <rect key="frame" x="120" y="72" width="216" height="21"/>
+                                                                <rect key="frame" x="120" y="72" width="214" height="21"/>
                                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="20k-Pk-kTd">
                                                                     <font key="font" metaFont="system"/>
                                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -1177,7 +1182,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="c6A-A9-3pX">
-                                                                <rect key="frame" x="120" y="44" width="216" height="21"/>
+                                                                <rect key="frame" x="120" y="44" width="214" height="21"/>
                                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="jHH-tX-wa5">
                                                                     <font key="font" metaFont="system"/>
                                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -1213,7 +1218,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pNY-m5-JQs">
-                                                                <rect key="frame" x="120" y="16" width="216" height="21"/>
+                                                                <rect key="frame" x="120" y="16" width="214" height="21"/>
                                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="32D-18-tqH">
                                                                     <font key="font" metaFont="system"/>
                                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -1976,7 +1981,7 @@
                                 </view>
                             </box>
                             <textField horizontalHuggingPriority="255" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="81J-7V-bx2">
-                                <rect key="frame" x="40" y="12" width="618" height="32"/>
+                                <rect key="frame" x="46" y="12" width="612" height="32"/>
                                 <textFieldCell key="cell" title="Mastonaut does not support offline notification delivery. You will only receive notifications while Mastonaut is running." id="3zC-JY-08E">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -1984,8 +1989,10 @@
                                 </textFieldCell>
                             </textField>
                             <imageView horizontalHuggingPriority="750" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mo0-5B-gDg">
-                                <rect key="frame" x="20" y="21" width="14" height="14"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="info_small" id="NAZ-pV-c0k"/>
+                                <rect key="frame" x="20" y="19" width="20" height="20"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="NAZ-pV-c0k">
+                                    <imageReference key="image" image="info.circle" catalog="system" symbolScale="large"/>
+                                </imageCell>
                             </imageView>
                         </subviews>
                         <constraints>
@@ -2022,12 +2029,12 @@
         <image name="NSAddTemplate" width="18" height="16"/>
         <image name="NSRemoveTemplate" width="18" height="4"/>
         <image name="at.circle" catalog="system" width="15" height="15"/>
-        <image name="bell.badge" catalog="system" width="14" height="16"/>
+        <image name="bell.badge" catalog="system" width="15" height="16"/>
+        <image name="exclamationmark.triangle" catalog="system" width="21" height="19"/>
+        <image name="eye" catalog="system" width="26" height="17"/>
         <image name="eye.circle" catalog="system" width="15" height="15"/>
         <image name="gearshape" catalog="system" width="16" height="16"/>
-        <image name="info_small" width="14" height="14"/>
-        <image name="sensitive_show" width="20" height="15"/>
-        <image name="square.and.pencil" catalog="system" width="16" height="15"/>
-        <image name="warning" width="17" height="15"/>
+        <image name="info.circle" catalog="system" width="20" height="20"/>
+        <image name="square.and.pencil" catalog="system" width="17" height="15"/>
     </resources>
 </document>

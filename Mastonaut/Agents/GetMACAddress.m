@@ -45,7 +45,8 @@ static kern_return_t FindEthernetInterfaces(io_iterator_t *matchingServices)
     mach_port_t				masterPort		= MACH_PORT_NULL;
     CFMutableDictionaryRef	classesToMatch	= NULL;
 
-    kernResult = IOMasterPort(MACH_PORT_NULL, &masterPort);
+//    kernResult = IOMasterPort(MACH_PORT_NULL, &masterPort);
+	kernResult = kIOMainPortDefault;
     if ( kernResult == KERN_SUCCESS )
 	{
 		// Ethernet interfaces are instances of class kIOEthernetInterfaceClass

@@ -11,11 +11,11 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <tableCellView wantsLayer="YES" id="Hz6-mo-xeY" customClass="FocusedStatusTableCellView" customModule="Mastonaut" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="330" height="390"/>
+            <rect key="frame" x="0.0" y="0.0" width="330" height="389"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <customView wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZOF-P9-3K0" customClass="BorderView" customModule="CoreTootin">
-                    <rect key="frame" x="12" y="320" width="54" height="54"/>
+                    <rect key="frame" x="12" y="319" width="54" height="54"/>
                     <subviews>
                         <button translatesAutoresizingMaskIntoConstraints="NO" id="SPv-5a-3fl">
                             <rect key="frame" x="0.0" y="0.0" width="54" height="54"/>
@@ -44,7 +44,7 @@
                     </userDefinedRuntimeAttributes>
                 </customView>
                 <button verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Mr1-Dk-o1f">
-                    <rect key="frame" x="78" y="362" width="112" height="16"/>
+                    <rect key="frame" x="78" y="361" width="112" height="16"/>
                     <buttonCell key="cell" type="bevel" title="John Appleseed " bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" inset="2" id="Iq6-6n-4b7">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" textStyle="headline" name=".SFNS-Bold"/>
@@ -55,7 +55,7 @@
                     </connections>
                 </button>
                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="e90-GJ-Pog">
-                    <rect key="frame" x="78" y="345" width="193" height="14"/>
+                    <rect key="frame" x="78" y="344" width="193" height="14"/>
                     <textFieldCell key="cell" lineBreakMode="truncatingTail" title="john.appleseed@mastodon.example" id="0Lg-rL-09u">
                         <font key="font" textStyle="subheadline" name=".SFNS-Regular"/>
                         <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -71,13 +71,13 @@
                     </textFieldCell>
                 </textField>
                 <stackView wantsLayer="YES" distribution="fillProportionally" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="751" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NiZ-P1-sSE">
-                    <rect key="frame" x="80" y="40" width="238" height="299"/>
+                    <rect key="frame" x="80" y="40" width="238" height="298"/>
                     <subviews>
                         <customView placeholderIntrinsicWidth="238" placeholderIntrinsicHeight="23" translatesAutoresizingMaskIntoConstraints="NO" id="FqU-Ny-Ix8" customClass="BorderView" customModule="CoreTootin">
-                            <rect key="frame" x="0.0" y="275" width="238" height="24"/>
+                            <rect key="frame" x="0.0" y="275" width="238" height="23"/>
                             <subviews>
                                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="Rhy-uU-pzk" customClass="BackgroundView" customModule="CoreTootin">
-                                    <rect key="frame" x="0.0" y="0.0" width="35" height="24"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="35" height="23"/>
                                     <subviews>
                                         <textField toolTip="Content Warning" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x18-6K-zTd">
                                             <rect key="frame" x="4" y="4" width="27" height="16"/>
@@ -102,9 +102,9 @@
                                     </userDefinedRuntimeAttributes>
                                 </customView>
                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBR-vf-Qi5" customClass="AttributedLabel">
-                                    <rect key="frame" x="41" y="3" width="191" height="19"/>
+                                    <rect key="frame" x="41" y="3" width="191" height="18"/>
                                     <textFieldCell key="cell" selectable="YES" allowsUndo="NO" alignment="left" title="The quick brown fox" allowsEditingTextAttributes="YES" id="LJk-pU-oYV">
-                                        <font key="font" metaFont="system" size="15"/>
+                                        <font key="font" textStyle="headline" name=".SFNS-Bold"/>
                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
@@ -172,17 +172,17 @@
                                     <rect key="frame" x="80" y="5" width="148" height="62"/>
                                     <subviews>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="751" horizontalCompressionResistancePriority="490" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="SEL-3T-ISm">
-                                            <rect key="frame" x="-2" y="0.0" width="152" height="17"/>
+                                            <rect key="frame" x="-2" y="0.0" width="152" height="14"/>
                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" title="www.longdomainexample.com" id="rak-fW-t7I">
-                                                <font key="font" metaFont="menu" size="14"/>
+                                                <font key="font" textStyle="subheadline" name=".SFNS-Regular"/>
                                                 <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="252" verticalHuggingPriority="752" horizontalCompressionResistancePriority="490" translatesAutoresizingMaskIntoConstraints="NO" id="HHf-0w-Cz8">
-                                            <rect key="frame" x="-2" y="20" width="152" height="42"/>
+                                            <rect key="frame" x="-2" y="17" width="152" height="45"/>
                                             <textFieldCell key="cell" truncatesLastVisibleLine="YES" title="Very long title that causes everything to wrap." id="wqA-9R-EgX">
-                                                <font key="font" metaFont="systemMedium" size="15"/>
+                                                <font key="font" textStyle="headline" name=".SFNS-Bold"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
@@ -445,11 +445,6 @@
             <point key="canvasLocation" x="59" y="-3"/>
         </tableCellView>
     </objects>
-    <designables>
-        <designable name="mhw-7K-d4x">
-            <size key="intrinsicContentSize" width="400" height="400"/>
-        </designable>
-    </designables>
     <resources>
         <image name="arrow.triangle.2.circlepath.circle" catalog="system" width="15" height="15"/>
         <image name="arrow.triangle.2.circlepath.circle.fill" catalog="system" width="15" height="15"/>

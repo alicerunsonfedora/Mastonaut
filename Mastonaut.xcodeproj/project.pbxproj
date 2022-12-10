@@ -205,7 +205,7 @@
 		155EDC24229B3E5700F1226A /* ReceiptValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 155EDC22229B3E5700F1226A /* ReceiptValidation.m */; };
 		15608F45232C4DED00923CB7 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15608F44232C4DED00923CB7 /* ShareViewController.swift */; };
 		15608F48232C4DED00923CB7 /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15608F46232C4DED00923CB7 /* ShareViewController.xib */; };
-		15608F4D232C4DED00923CB7 /* QuickToot.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 15608F40232C4DED00923CB7 /* QuickToot.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		15608F4D232C4DED00923CB7 /* QuickToot.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 15608F40232C4DED00923CB7 /* QuickToot.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1561C09621FE5AB400476467 /* BackgroundTableRowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1561C09521FE5AB400476467 /* BackgroundTableRowView.xib */; };
 		1561C09721FE5AB400476467 /* BackgroundTableRowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1561C09521FE5AB400476467 /* BackgroundTableRowView.xib */; };
 		1561EBAF225C02070034EAA6 /* MastodonURLResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1561EBAE225C02070034EAA6 /* MastodonURLResolver.swift */; };
@@ -587,15 +587,15 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		15447880232AF942009C71D4 /* Embed App Extensions */ = {
+		15447880232AF942009C71D4 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				15608F4D232C4DED00923CB7 /* QuickToot.appex in Embed App Extensions */,
+				15608F4D232C4DED00923CB7 /* QuickToot.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -936,6 +936,7 @@
 		613EECFE95639DB968A362BE /* Pods-QuickToot.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickToot.adhoc.xcconfig"; path = "Target Support Files/Pods-QuickToot/Pods-QuickToot.adhoc.xcconfig"; sourceTree = "<group>"; };
 		7AEAB27D6CB6D651C5299936 /* Pods-MastonautTests.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MastonautTests.adhoc.xcconfig"; path = "Target Support Files/Pods-MastonautTests/Pods-MastonautTests.adhoc.xcconfig"; sourceTree = "<group>"; };
 		8BE1B4746437CF8AAE269D73 /* Pods-Mastonaut (Mock).adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mastonaut (Mock).adhoc.xcconfig"; path = "Target Support Files/Pods-Mastonaut (Mock)/Pods-Mastonaut (Mock).adhoc.xcconfig"; sourceTree = "<group>"; };
+		95F52B082943C870000C1555 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BDA5F885C761EEC9A0A80081 /* Pods-Mastonaut (Mock).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mastonaut (Mock).release.xcconfig"; path = "Target Support Files/Pods-Mastonaut (Mock)/Pods-Mastonaut (Mock).release.xcconfig"; sourceTree = "<group>"; };
 		C98AE161223D7FB700A8DD22 /* AvatarImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageCache.swift; sourceTree = "<group>"; };
 		D052D8D7DC75AE86FA6E38F0 /* Pods-Mastonaut.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mastonaut.adhoc.xcconfig"; path = "Target Support Files/Pods-Mastonaut/Pods-Mastonaut.adhoc.xcconfig"; sourceTree = "<group>"; };
@@ -1435,6 +1436,7 @@
 		15C4DD0321D41EC0002AF6DA = {
 			isa = PBXGroup;
 			children = (
+				95F52B082943C870000C1555 /* README.md */,
 				15C4DD0E21D41EC0002AF6DA /* Mastonaut */,
 				1512DB82221B8D030090F2BD /* Dependencies */,
 				15DE367522443FFA00480949 /* MastonautTests */,
@@ -1841,7 +1843,7 @@
 				15C4DD0A21D41EC0002AF6DA /* Resources */,
 				1507923D21D6E229009EE4A3 /* Embed Frameworks */,
 				15370A97224C5A66003DA836 /* Bump Build */,
-				15447880232AF942009C71D4 /* Embed App Extensions */,
+				15447880232AF942009C71D4 /* Embed Foundation Extensions */,
 				BEDC31C53C21942AE6E1D83E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -1882,7 +1884,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1420;
 				ORGANIZATIONNAME = "Bruno Philipe";
 				TargetAttributes = {
 					1544789E232B0223009C71D4 = {
@@ -2814,15 +2816,17 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 134;
+				CURRENT_PROJECT_VERSION = 135;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Mastonaut/Supporting Files/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Mastonaut++";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.3.9;
+				MARKETING_VERSION = 1.3.10;
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D MOCK";
 				PRODUCT_BUNDLE_IDENTIFIER = net.marquiskurt.mastonaut.mac;
 				PRODUCT_NAME = Mastonaut;
@@ -2843,15 +2847,17 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 134;
+				CURRENT_PROJECT_VERSION = 135;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Mastonaut/Supporting Files/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Mastonaut++";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.3.9;
+				MARKETING_VERSION = 1.3.10;
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D MOCK";
 				PRODUCT_BUNDLE_IDENTIFIER = net.marquiskurt.mastonaut.mac;
 				PRODUCT_NAME = Mastonaut;
@@ -2871,6 +2877,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 134;
+				DEAD_CODE_STRIPPING = YES;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -2905,6 +2912,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 134;
+				DEAD_CODE_STRIPPING = YES;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -2938,6 +2946,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 134;
+				DEAD_CODE_STRIPPING = YES;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -2970,7 +2979,8 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 134;
+				CURRENT_PROJECT_VERSION = 135;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = FQQXSP79X3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = QuickToot/Info.plist;
@@ -2980,7 +2990,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.3.9;
+				MARKETING_VERSION = 1.3.10;
 				PRODUCT_BUNDLE_IDENTIFIER = net.marquiskurt.mastonaut.mac.QuickToot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -2996,7 +3006,8 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 134;
+				CURRENT_PROJECT_VERSION = 135;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = FQQXSP79X3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = QuickToot/Info.plist;
@@ -3006,7 +3017,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.3.9;
+				MARKETING_VERSION = 1.3.10;
 				PRODUCT_BUNDLE_IDENTIFIER = net.marquiskurt.mastonaut.mac.QuickToot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -3022,7 +3033,8 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 134;
+				CURRENT_PROJECT_VERSION = 135;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = FQQXSP79X3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = QuickToot/Info.plist;
@@ -3032,7 +3044,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.3.9;
+				MARKETING_VERSION = 1.3.10;
 				PRODUCT_BUNDLE_IDENTIFIER = net.marquiskurt.mastonaut.mac.QuickToot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -3075,6 +3087,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -3141,6 +3154,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -3173,16 +3187,19 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 134;
+				CURRENT_PROJECT_VERSION = 135;
+				DEAD_CODE_STRIPPING = YES;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FQQXSP79X3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Mastonaut/Supporting Files/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Mastonaut;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.3.9;
+				MARKETING_VERSION = 1.3.10;
 				PRODUCT_BUNDLE_IDENTIFIER = net.marquiskurt.mastonaut.mac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -3203,16 +3220,19 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 134;
+				CURRENT_PROJECT_VERSION = 135;
+				DEAD_CODE_STRIPPING = YES;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FQQXSP79X3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Mastonaut/Supporting Files/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Mastonaut;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.3.9;
+				MARKETING_VERSION = 1.3.10;
 				PRODUCT_BUNDLE_IDENTIFIER = net.marquiskurt.mastonaut.mac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -3228,6 +3248,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MastonautTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3235,7 +3256,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				PRODUCT_BUNDLE_IDENTIFIER = ph.bruno.MastonautTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -3250,6 +3271,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MastonautTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3257,7 +3279,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				PRODUCT_BUNDLE_IDENTIFIER = ph.bruno.MastonautTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -3300,6 +3322,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -3341,16 +3364,19 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 134;
+				CURRENT_PROJECT_VERSION = 135;
+				DEAD_CODE_STRIPPING = YES;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FQQXSP79X3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Mastonaut/Supporting Files/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Mastonaut;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.3.9;
+				MARKETING_VERSION = 1.3.10;
 				PRODUCT_BUNDLE_IDENTIFIER = net.marquiskurt.mastonaut.mac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -3369,15 +3395,17 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 134;
+				CURRENT_PROJECT_VERSION = 135;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Mastonaut/Supporting Files/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Mastonaut++";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.3.9;
+				MARKETING_VERSION = 1.3.10;
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D MOCK";
 				PRODUCT_BUNDLE_IDENTIFIER = net.marquiskurt.mastonaut.mac;
 				PRODUCT_NAME = Mastonaut;
@@ -3394,6 +3422,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MastonautTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3401,7 +3430,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				PRODUCT_BUNDLE_IDENTIFIER = ph.bruno.MastonautTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

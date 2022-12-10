@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16097" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.AVKitIBPlugin" version="16097"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097"/>
+        <plugIn identifier="com.apple.AVKitIBPlugin" version="21507"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -24,10 +24,10 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" deferred="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="utilityWindow" tabbingMode="disallowed" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="F0z-JX-Cv5" customClass="TransientWindow" customModule="Mastonaut" customModuleProvider="target">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES" fullSizeContentView="YES"/>
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
             <windowCollectionBehavior key="collectionBehavior" moveToActiveSpace="YES" transient="YES" participatesInCycle="YES" fullScreenAuxiliary="YES" fullScreenDisallowsTiling="YES"/>
             <rect key="contentRect" x="474" y="323" width="400" height="270"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1440"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1055"/>
             <view key="contentView" wantsLayer="YES" id="se5-gp-TjO" customClass="BackgroundView" customModule="CoreTootin">
                 <rect key="frame" x="0.0" y="0.0" width="400" height="270"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,7 +83,7 @@
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="share_shadow" id="UVt-wT-cHP"/>
                     </imageView>
                     <button translatesAutoresizingMaskIntoConstraints="NO" id="eDD-p4-DE9">
-                        <rect key="frame" x="12" y="12" width="15" height="22"/>
+                        <rect key="frame" x="12" y="9" width="15" height="30"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="22" id="Xbd-gn-fHM"/>
                             <constraint firstAttribute="width" secondItem="eDD-p4-DE9" secondAttribute="height" multiplier="11:16" id="nec-dX-IV6"/>
@@ -177,7 +177,7 @@
         </menu>
     </objects>
     <resources>
-        <image name="NSShareTemplate" width="11" height="16"/>
+        <image name="NSShareTemplate" width="19" height="21"/>
         <image name="arrow_next" width="15" height="35"/>
         <image name="arrow_next_active" width="15" height="35"/>
         <image name="arrow_prev" width="15" height="35"/>
