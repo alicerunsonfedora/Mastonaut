@@ -567,6 +567,7 @@ class TimelinesWindowController: NSWindowController, UserPopUpButtonDisplaying, 
 
 			let reloadColumnItem = NSMenuItem()
 			reloadColumnItem.title = 🔠("Reload this Column")
+			reloadColumnItem.image = NSImage(systemSymbolName: "arrow.clockwise", accessibilityDescription: nil)
 			reloadColumnItem.target = self
 			reloadColumnItem.representedObject = index
 			reloadColumnItem.action = #selector(TimelinesWindowController.reloadColumn(_:))
@@ -575,6 +576,10 @@ class TimelinesWindowController: NSWindowController, UserPopUpButtonDisplaying, 
 			if index > 0 {
 				let removeColumnItem = NSMenuItem()
 				removeColumnItem.title = 🔠("Remove this Column")
+				removeColumnItem.image = NSImage(
+					systemSymbolName: "rectangle.portrait.slash.fill",
+					accessibilityDescription: nil
+				)
 				removeColumnItem.target = self
 				removeColumnItem.representedObject = index
 				removeColumnItem.action = #selector(TimelinesWindowController.removeColumn(_:))
@@ -1069,7 +1074,9 @@ private extension TimelinesWindowController {
 
 	static func makeNewColumnSegmentedControl() -> NSSegmentedControl {
 		let segmentedControl = NSSegmentedControl(
-			images: [.init(systemSymbolName: "plus.rectangle.portrait", accessibilityDescription: nil) ?? #imageLiteral(resourceName: "add_panel")],
+			images: [
+				.init(systemSymbolName: "rectangle.portrait.righthalf.filled", accessibilityDescription: nil) ?? #imageLiteral(resourceName: "add_panel")
+			],
 			trackingMode: .momentary,
 			target: nil,
 			action: #selector(addColumnMode(_:))
