@@ -1065,6 +1065,8 @@ extension ListViewController
 				let indicator = NSImageView(frame: .zero)
 				indicator.translatesAutoresizingMaskIntoConstraints = false
 				indicator.setAccessibilityElement(false)
+				indicator.setAccessibilityLabel("WebSocket Status: \(state.rawValue)")
+				indicator.toolTip = "WebSocket Status: \(state.rawValue)"
 				view.addSubview(indicator)
 
 				NSLayoutConstraint.activate([
