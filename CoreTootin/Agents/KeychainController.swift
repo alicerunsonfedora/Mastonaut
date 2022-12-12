@@ -19,6 +19,7 @@
 
 import Foundation
 import Security
+import KeychainAccess
 
 public protocol KeychainStorable: Codable
 {
@@ -47,6 +48,8 @@ public class KeychainController
 	/// `nil` to use the local keychain. The default value is nil.
 	public var keychainGroupIdentifier: String? = nil
 
+	fileprivate var internalKeychainAccess: KeychainAccess.Keychain
+
 	/// Initializes the Keychain controller.
 	///
 	/// - Parameter service: The service name. Should be a unique name (such as your app's unique identifier).
@@ -54,6 +57,7 @@ public class KeychainController
 	{
 		self.service = service
 		self.serviceLabel = serviceLabel ?? service
+		self.internalKeychainAccess = KeychainAccess.Keychain(service: service)
 	}
 
 	/// Store a storable object into the keychain.
@@ -110,21 +114,7 @@ public class KeychainController
 	/// Delete EVERY entry on the keychain that matches the receiver's service property.
 	public func deleteAllStorablesForService() throws
 	{
-		let localResult = SecItemDelete(basicQueryAttributes(useGroupIfPossible: false) as CFDictionary)
-
-		guard localResult == errSecSuccess else
-		{
-			throw Errors.secItemError(localResult)
-		}
-
-		guard keychainGroupIdentifier != nil else { return }
-
-		let groupResult = SecItemDelete(basicQueryAttributes(useGroupIfPossible: true) as CFDictionary)
-
-		guard groupResult == errSecSuccess else
-		{
-			throw Errors.secItemError(groupResult)
-		}
+		try internalKeychainAccess.removeAll()
 	}
 
 	/// Migrates an existing storable found on the group keychain to the local keychain, adding the SecAccess control
@@ -166,87 +156,19 @@ private extension KeychainController // Helpers
 	/// - Throws: Errors.secItemError
 	func storeData(_ data: Data, account: String) throws
 	{
-		let now = Date()
-
-		var attributes: [String: AnyObject] = [
-			kSecClass as String: kSecClassGenericPassword,
-			kSecAttrCreationDate as String: now as AnyObject,
-			kSecAttrModificationDate as String: now as AnyObject,
-			kSecAttrAccount as String: account as AnyObject,
-			kSecAttrService as String: service as AnyObject,
-			kSecValueData as String: data as AnyObject,
-			kSecAttrLabel as String: "\(serviceLabel) (\(account))" as AnyObject
-		]
-
-		if let secAccess = Bundle.main.mastonautSecurityAccess() as AnyObject?
-		{
-			attributes[kSecAttrAccess as String] = secAccess
-		}
-
-		let result = SecItemAdd(attributes as CFDictionary, nil)
-
-		guard result == errSecSuccess else
-		{
-			throw Errors.secItemError(result)
-		}
+		internalKeychainAccess[data: account] = data
 	}
 
 	/// Delete a storable from the keychain. If `useGroupIfPossible` is `false`, will always try deleting from the
 	/// local keychain.
 	func deleteItem(_ account: String, useGroupIfPossible useGroup: Bool) throws
 	{
-		let result = SecItemDelete(basicQueryAttributes(for: account, useGroupIfPossible: useGroup) as CFDictionary)
-
-		guard result == errSecSuccess else
-		{
-			throw Errors.secItemError(result)
-		}
-	}
-
-	/// Returns the basic query attribuites to match a leychain record stored with this library.
-	func basicQueryAttributes(for account: String, useGroupIfPossible: Bool = true) -> [String: AnyObject]
-	{
-		var attributes = basicQueryAttributes(useGroupIfPossible: useGroupIfPossible)
-		attributes[kSecAttrAccount as String] = account as AnyObject
-		return attributes
+		try internalKeychainAccess.remove(account)
 	}
 
 	/// Fetches any data associated with the given account without trying to parse it.
 	func queryData(for account: String, useGroupIfPossible: Bool = true) throws -> Data?
 	{
-		var attributes = basicQueryAttributes(for: account, useGroupIfPossible: useGroupIfPossible)
-
-		attributes[kSecReturnData as String] = true as AnyObject
-
-		var output: AnyObject?
-		let result = SecItemCopyMatching(attributes as CFDictionary, &output)
-
-		guard [errSecSuccess, errSecItemNotFound].contains(result) else
-		{
-			throw Errors.secItemError(result)
-		}
-
-		if let encodedData = output as? Data
-		{
-			return encodedData
-		}
-
-		return nil
-	}
-
-	func basicQueryAttributes(useGroupIfPossible: Bool) -> [String: AnyObject]
-	{
-		var attributes: [String: AnyObject] = [
-			kSecClass as String: kSecClassGenericPassword,
-			kSecAttrService as String: service as AnyObject
-		]
-
-		if useGroupIfPossible, let accessGroup = keychainGroupIdentifier
-		{
-			attributes[kSecAttrSynchronizable as String] = kSecAttrSynchronizableAny
-			attributes[kSecAttrAccessGroup as String] = accessGroup as AnyObject
-		}
-
-		return attributes
+		return try internalKeychainAccess.getData(account)
 	}
 }

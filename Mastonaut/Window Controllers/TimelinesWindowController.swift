@@ -248,8 +248,8 @@ class TimelinesWindowController: NSWindowController, UserPopUpButtonDisplaying, 
 		// Since we know the type in advance, we use a separate archiver for the navigation stack which skips
 		// the class name level and encodes only the internals.
 //		if let stack: NavigationStack<SidebarMode> = coder.decodeObject(forKey: CodingKeys.sidebarNavigationStack)
-		if let stackEncodedData: Data = coder.decodeObject(forKey: CodingKeys.sidebarNavigationStack) {
-			let decoder = NSKeyedUnarchiver(forReadingWith: stackEncodedData)
+		if let stackEncodedData: Data = coder.decodeObject(forKey: CodingKeys.sidebarNavigationStack),
+		   let decoder = try? NSKeyedUnarchiver(forReadingFrom: stackEncodedData) {
 			if let stack = NavigationStack<SidebarMode>(coder: decoder) {
 				timelinesSplitViewController.preserveSplitViewSizeForNextSidebarInstall = true
 				sidebarSubcontroller = SidebarSubcontroller(sidebarContainer: self,

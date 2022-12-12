@@ -26,5 +26,5 @@ FOUNDATION_EXPORT double CoreTootinVersionNumber;
 FOUNDATION_EXPORT const unsigned char CoreTootinVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <CoreTootin/PublicHeader.h>
-#import <CoreTootin/NSBundle+KeychainAccess.h>
+
 

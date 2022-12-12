@@ -181,8 +181,6 @@
 		1545FC0923357143006CCD2C /* AttachmentDescriptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1545FC0723357143006CCD2C /* AttachmentDescriptionViewController.xib */; };
 		1545FC0A23357AA3006CCD2C /* CorrectiveTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F5B1FE22AB1B7200364120 /* CorrectiveTextField.swift */; };
 		1546CB82232E7BC700A0F3AC /* NSStackView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15883DB12214BFC00046FEE8 /* NSStackView+Additions.swift */; };
-		154AC42724D238AD00F89400 /* NSBundle+KeychainAccess.h in Headers */ = {isa = PBXBuildFile; fileRef = 154AC42524D238AD00F89400 /* NSBundle+KeychainAccess.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		154AC42824D238AD00F89400 /* NSBundle+KeychainAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 154AC42624D238AD00F89400 /* NSBundle+KeychainAccess.m */; };
 		154B6BC4234A161A0025A9DB /* NavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BC4157226255B200C2A150 /* NavigationStack.swift */; };
 		154B6BC5234A165E0025A9DB /* NSCoder+RawRepresentableKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ADB6A8221E01ED0083A224 /* NSCoder+RawRepresentableKeys.swift */; };
 		154B6BC7234A16C50025A9DB /* NavigationStackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154B6BC6234A16C50025A9DB /* NavigationStackTests.swift */; };
@@ -509,6 +507,8 @@
 		957BA4712947ADE00050AD11 /* CocoaLumberjack in Frameworks */ = {isa = PBXBuildFile; productRef = 957BA4702947ADE00050AD11 /* CocoaLumberjack */; };
 		957BA4732947ADE30050AD11 /* SVGKit in Frameworks */ = {isa = PBXBuildFile; productRef = 957BA4722947ADE30050AD11 /* SVGKit */; };
 		957BA4752947ADE70050AD11 /* AckGen in Frameworks */ = {isa = PBXBuildFile; productRef = 957BA4742947ADE70050AD11 /* AckGen */; };
+		957BA4782947CB880050AD11 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 957BA4772947CB880050AD11 /* KeychainAccess */; };
+		957BA47A2947CBB10050AD11 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 957BA4792947CBB10050AD11 /* KeychainAccess */; };
 		95CD3F1B29478666002C03FE /* AckGen in Frameworks */ = {isa = PBXBuildFile; productRef = 95CD3F1A29478666002C03FE /* AckGen */; };
 		95CD3F1D29478666002C03FE /* AckGenUI in Frameworks */ = {isa = PBXBuildFile; productRef = 95CD3F1C29478666002C03FE /* AckGenUI */; };
 		95CD3F22294786B9002C03FE /* Acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95CD3F21294786B9002C03FE /* Acknowledgements.plist */; };
@@ -731,8 +731,6 @@
 		1547C99B220A358C00F64665 /* AttachmentItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentItem.swift; sourceTree = "<group>"; };
 		1547C99C220A358C00F64665 /* AttachmentItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttachmentItem.xib; sourceTree = "<group>"; };
 		1547C9A1220A3F9800F64665 /* URL+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Additions.swift"; sourceTree = "<group>"; };
-		154AC42524D238AD00F89400 /* NSBundle+KeychainAccess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSBundle+KeychainAccess.h"; sourceTree = "<group>"; };
-		154AC42624D238AD00F89400 /* NSBundle+KeychainAccess.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+KeychainAccess.m"; sourceTree = "<group>"; };
 		154B6BC6234A16C50025A9DB /* NavigationStackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackTests.swift; sourceTree = "<group>"; };
 		154D4350237F459E005D99D9 /* FilterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterService.swift; sourceTree = "<group>"; };
 		154E9FDB234564F300885966 /* TagBookmarkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagBookmarkService.swift; sourceTree = "<group>"; };
@@ -962,6 +960,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				957BA47A2947CBB10050AD11 /* KeychainAccess in Frameworks */,
 				95F52B1D29477DE6000C1555 /* MastodonKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -986,6 +985,7 @@
 				95F52B1229477C12000C1555 /* CocoaLumberjackSwiftLogBackend in Frameworks */,
 				95CD3F1B29478666002C03FE /* AckGen in Frameworks */,
 				154478A6232B0223009C71D4 /* CoreTootin.framework in Frameworks */,
+				957BA4782947CB880050AD11 /* KeychainAccess in Frameworks */,
 				95F52B0E29477C12000C1555 /* CocoaLumberjack in Frameworks */,
 				95F52B1529477C3C000C1555 /* SVGKit in Frameworks */,
 				95F52B0B29477BF3000C1555 /* Starscream in Frameworks */,
@@ -1404,8 +1404,6 @@
 				159C2185232D478C00139BD5 /* Visibility+MenuItemCapable.swift */,
 				1574DE24233C04D900AB1036 /* NSViewController+Alerts.swift */,
 				15BF72C7234299D10020CE70 /* NSAlert+Factory.swift */,
-				154AC42524D238AD00F89400 /* NSBundle+KeychainAccess.h */,
-				154AC42624D238AD00F89400 /* NSBundle+KeychainAccess.m */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1750,7 +1748,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				154478A3232B0223009C71D4 /* CoreTootin.h in Headers */,
-				154AC42724D238AD00F89400 /* NSBundle+KeychainAccess.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1803,6 +1800,7 @@
 			name = CoreTootin;
 			packageProductDependencies = (
 				95F52B1C29477DE6000C1555 /* MastodonKit */,
+				957BA4792947CBB10050AD11 /* KeychainAccess */,
 			);
 			productName = CoreTootin;
 			productReference = 1544789F232B0223009C71D4 /* CoreTootin.framework */;
@@ -1858,6 +1856,7 @@
 				95F52B1A29477DA7000C1555 /* MastodonKit */,
 				95CD3F1A29478666002C03FE /* AckGen */,
 				95CD3F1C29478666002C03FE /* AckGenUI */,
+				957BA4772947CB880050AD11 /* KeychainAccess */,
 			);
 			productName = Sengi;
 			productReference = 15C4DD0C21D41EC0002AF6DA /* Mastonaut.app */;
@@ -1938,6 +1937,7 @@
 				95F52B0C29477C12000C1555 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */,
 				95F52B1329477C3C000C1555 /* XCRemoteSwiftPackageReference "SVGKit" */,
 				95CD3F1929478666002C03FE /* XCRemoteSwiftPackageReference "AckGen" */,
+				957BA4762947CB880050AD11 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			productRefGroup = 15C4DD0D21D41EC0002AF6DA /* Products */;
 			projectDirPath = "";
@@ -2429,7 +2429,6 @@
 				15431282232EE8B80010854A /* UserPopUpButtonSubcontroller.swift in Sources */,
 				15EE2B03232EA19400155E16 /* URL+Additions.swift in Sources */,
 				1531C1132331813900725A0C /* Array+Helpers.swift in Sources */,
-				154AC42824D238AD00F89400 /* NSBundle+KeychainAccess.m in Sources */,
 				15EE2B0B232EA35000155E16 /* AttachmentItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3379,6 +3378,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		957BA4762947CB880050AD11 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.2;
+			};
+		};
 		95CD3F1929478666002C03FE /* XCRemoteSwiftPackageReference "AckGen" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/MartinP7r/AckGen";
@@ -3437,6 +3444,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 95CD3F1929478666002C03FE /* XCRemoteSwiftPackageReference "AckGen" */;
 			productName = AckGen;
+		};
+		957BA4772947CB880050AD11 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 957BA4762947CB880050AD11 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+		957BA4792947CBB10050AD11 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 957BA4762947CB880050AD11 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
 		};
 		95CD3F1A29478666002C03FE /* AckGen */ = {
 			isa = XCSwiftPackageProductDependency;
