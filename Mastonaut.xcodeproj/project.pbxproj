@@ -1813,7 +1813,7 @@
 			buildConfigurationList = 15C4DD3321D41EC0002AF6DA /* Build configuration list for PBXNativeTarget "Mastonaut" */;
 			buildPhases = (
 				15FA215B229B378D00B86DC6 /* Generate Versions Header */,
-				95CD3F2029478675002C03FE /* ShellScript */,
+				95CD3F2029478675002C03FE /* Build Acknowledgements List */,
 				15C4DD0821D41EC0002AF6DA /* Sources */,
 				15C4DD0921D41EC0002AF6DA /* Frameworks */,
 				15C4DD0A21D41EC0002AF6DA /* Resources */,
@@ -2151,7 +2151,7 @@
 			shellPath = /bin/sh;
 			shellScript = "BUNDLE_VERSION=$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' $SRCROOT/Mastonaut/Supporting\\ Files/Info.plist)\necho \"#define BUNDLE_VERSION \\\"$MARKETING_VERSION\\\"\" > $DERIVED_FILE_DIR/BundleVersions.h\n";
 		};
-		95CD3F2029478675002C03FE /* ShellScript */ = {
+		95CD3F2029478675002C03FE /* Build Acknowledgements List */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2160,6 +2160,7 @@
 			);
 			inputPaths = (
 			);
+			name = "Build Acknowledgements List";
 			outputFileListPaths = (
 			);
 			outputPaths = (
