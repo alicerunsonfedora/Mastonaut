@@ -35,13 +35,26 @@ class UserNotificationTool
 
 	func postNotification(title: String, subtitle: String?, message: String?, payload: NotificationPayload? = nil)
 	{
-		let notification = NSUserNotification()
+		let notification = UNMutableNotificationContent()
 		notification.title = title
-		notification.subtitle = subtitle
-		notification.informativeText = message
+		if let subtitle = subtitle
+		{
+			notification.subtitle = subtitle
+		}
+		if let message = message
+		{
+			notification.body = message
+		}
 		notification.payload = payload
 
-		NSUserNotificationCenter.default.scheduleNotification(notification)
+		let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+
+		let request = UNNotificationRequest(identifier: UUID().uuidString, content: notification, trigger: trigger)
+		UNUserNotificationCenter.current().add(request) { error in
+			if let error = error {
+				print("Err: \(error)")
+			}
+		}
 
 		if NSApp.isActive == false
 		{
@@ -122,13 +135,13 @@ class UserNotificationTool
 	}
 }
 
-extension NSUserNotification
+extension UNMutableNotificationContent
 {
 	var payload: NotificationPayload?
 	{
 		set(payload)
 		{
-			var dict = userInfo ?? [:]
+			var dict = userInfo
 
 			if let payload = payload
 			{
@@ -149,7 +162,7 @@ extension NSUserNotification
 		get
 		{
 			guard
-				let dict = userInfo?["mastonaut_payload"] as? [String: Any?],
+				let dict = userInfo["mastonaut_payload"] as? [String: Any?],
 				let accountUUID = (dict["account_UUID"] as? String).flatMap({ UUID(uuidString: $0) }),
 				let referenceURI = dict["reference_URI"] as? String,
 				let referenceType = (dict["reference_type"] as? String).flatMap({ NotificationPayload.Reference(rawValue: $0) })
@@ -157,6 +170,21 @@ extension NSUserNotification
 
 			return NotificationPayload(accountUUID: accountUUID, referenceURI: referenceURI, referenceType: referenceType)
 		}
+	}
+}
+
+extension UNNotificationContent
+{
+	var currentPayload: NotificationPayload?
+	{
+		guard
+			let dict = userInfo["mastonaut_payload"] as? [String: Any?],
+			let accountUUID = (dict["account_UUID"] as? String).flatMap({ UUID(uuidString: $0) }),
+			let referenceURI = dict["reference_URI"] as? String,
+			let referenceType = (dict["reference_type"] as? String).flatMap({ NotificationPayload.Reference(rawValue: $0) })
+		else { return nil }
+
+		return NotificationPayload(accountUUID: accountUUID, referenceURI: referenceURI, referenceType: referenceType)
 	}
 }
 

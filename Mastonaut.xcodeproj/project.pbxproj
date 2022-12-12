@@ -107,7 +107,6 @@
 		15249AF123401C7D0088B9EE /* NonVibrantPopUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15249AEF23401C7D0088B9EE /* NonVibrantPopUpButton.swift */; };
 		1528BA1D228B52F60072068F /* MastonautTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1528BA1C228B52F60072068F /* MastonautTableCellView.swift */; };
 		1528BA1E228B52F60072068F /* MastonautTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1528BA1C228B52F60072068F /* MastonautTableCellView.swift */; };
-		152B7317220E34D3004121F1 /* Pods-Mastonaut-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 152B7315220E34D3004121F1 /* Pods-Mastonaut-acknowledgements.plist */; };
 		152B731A220E35A7004121F1 /* AcknowledgementsWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152B7318220E35A7004121F1 /* AcknowledgementsWindowController.swift */; };
 		152B731B220E35A7004121F1 /* AcknowledgementsWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152B7318220E35A7004121F1 /* AcknowledgementsWindowController.swift */; };
 		152B731C220E35A7004121F1 /* AcknowledgementsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 152B7319220E35A7004121F1 /* AcknowledgementsWindowController.xib */; };
@@ -502,6 +501,14 @@
 		15F9F30C232EB9E900931594 /* SuggestionWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1530428122AEC64E00489F31 /* SuggestionWindowController.xib */; };
 		15FD4C33223870B000D699EF /* TransientWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FD4C32223870B000D699EF /* TransientWindow.swift */; };
 		15FD4C34223870B000D699EF /* TransientWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FD4C32223870B000D699EF /* TransientWindow.swift */; };
+		957BA4672947ADB60050AD11 /* Acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95CD3F21294786B9002C03FE /* Acknowledgements.plist */; };
+		957BA4682947ADD80050AD11 /* CoreTootin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1544789F232B0223009C71D4 /* CoreTootin.framework */; };
+		957BA4692947ADD80050AD11 /* CoreTootin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1544789F232B0223009C71D4 /* CoreTootin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		957BA46D2947ADDB0050AD11 /* MastodonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 957BA46C2947ADDB0050AD11 /* MastodonKit */; };
+		957BA46F2947ADDE0050AD11 /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = 957BA46E2947ADDE0050AD11 /* Starscream */; };
+		957BA4712947ADE00050AD11 /* CocoaLumberjack in Frameworks */ = {isa = PBXBuildFile; productRef = 957BA4702947ADE00050AD11 /* CocoaLumberjack */; };
+		957BA4732947ADE30050AD11 /* SVGKit in Frameworks */ = {isa = PBXBuildFile; productRef = 957BA4722947ADE30050AD11 /* SVGKit */; };
+		957BA4752947ADE70050AD11 /* AckGen in Frameworks */ = {isa = PBXBuildFile; productRef = 957BA4742947ADE70050AD11 /* AckGen */; };
 		95CD3F1B29478666002C03FE /* AckGen in Frameworks */ = {isa = PBXBuildFile; productRef = 95CD3F1A29478666002C03FE /* AckGen */; };
 		95CD3F1D29478666002C03FE /* AckGenUI in Frameworks */ = {isa = PBXBuildFile; productRef = 95CD3F1C29478666002C03FE /* AckGenUI */; };
 		95CD3F22294786B9002C03FE /* Acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95CD3F21294786B9002C03FE /* Acknowledgements.plist */; };
@@ -566,6 +573,13 @@
 			remoteGlobalIDString = 15C4DD0B21D41EC0002AF6DA;
 			remoteInfo = Mastonaut;
 		};
+		957BA46A2947ADD80050AD11 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15C4DD0421D41EC0002AF6DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1544789E232B0223009C71D4;
+			remoteInfo = CoreTootin;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -586,6 +600,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				957BA4692947ADD80050AD11 /* CoreTootin.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -935,6 +950,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				957BA4732947ADE30050AD11 /* SVGKit in Frameworks */,
+				957BA4712947ADE00050AD11 /* CocoaLumberjack in Frameworks */,
+				957BA46D2947ADDB0050AD11 /* MastodonKit in Frameworks */,
+				957BA4682947ADD80050AD11 /* CoreTootin.framework in Frameworks */,
+				957BA46F2947ADDE0050AD11 /* Starscream in Frameworks */,
+				957BA4752947ADE70050AD11 /* AckGen in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1754,8 +1775,16 @@
 			dependencies = (
 				156F7A5D23FB3E720061ABFB /* PBXTargetDependency */,
 				156F7A5F23FB3E720061ABFB /* PBXTargetDependency */,
+				957BA46B2947ADD80050AD11 /* PBXTargetDependency */,
 			);
 			name = "Mastonaut (Mock)";
+			packageProductDependencies = (
+				957BA46C2947ADDB0050AD11 /* MastodonKit */,
+				957BA46E2947ADDE0050AD11 /* Starscream */,
+				957BA4702947ADE00050AD11 /* CocoaLumberjack */,
+				957BA4722947ADE30050AD11 /* SVGKit */,
+				957BA4742947ADE70050AD11 /* AckGen */,
+			);
 			productName = Sengi;
 			productReference = 1523C71221E94C7F006DE234 /* Mastonaut.app */;
 			productType = "com.apple.product-type.application";
@@ -1930,6 +1959,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				957BA4672947ADB60050AD11 /* Acknowledgements.plist in Resources */,
 				15997185220E4AA300401585 /* mock_data_timeline_home.json in Resources */,
 				1523C70021E94C7F006DE234 /* MultipleAttachmentView.xib in Resources */,
 				151199CE22BFCF05007F2AEB /* ComposerPollViewController.xib in Resources */,
@@ -1974,7 +2004,6 @@
 				1523C70821E94C7F006DE234 /* MainMenu.xib in Resources */,
 				1523C70921E94C7F006DE234 /* AuthWindowController.xib in Resources */,
 				1523C70A21E94C7F006DE234 /* TripleAttachmentView.xib in Resources */,
-				152B7317220E34D3004121F1 /* Pods-Mastonaut-acknowledgements.plist in Resources */,
 				1594392D2299917800E47DBB /* InstanceTableCellView.xib in Resources */,
 				151E9A2E230C830500A76DB0 /* DebugWindowController.xib in Resources */,
 				1538FB3D2218A817006B5F78 /* Preferences.xcassets in Resources */,
@@ -2625,6 +2654,11 @@
 			target = 15C4DD0B21D41EC0002AF6DA /* Mastonaut */;
 			targetProxy = 15DE367922443FFA00480949 /* PBXContainerItemProxy */;
 		};
+		957BA46B2947ADD80050AD11 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1544789E232B0223009C71D4 /* CoreTootin */;
+			targetProxy = 957BA46A2947ADD80050AD11 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -2674,7 +2708,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 135;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = FQQXSP79X3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Mastonaut/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Mastonaut++";
@@ -2704,7 +2738,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 135;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = FQQXSP79X3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Mastonaut/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Mastonaut++";
@@ -3092,17 +3126,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = FQQXSP79X3;
 				INFOPLIST_FILE = MastonautTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ph.bruno.MastonautTests;
+				PRODUCT_BUNDLE_IDENTIFIER = net.marquiskurt.MastonautTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mastonaut.app/Contents/MacOS/Mastonaut";
@@ -3113,17 +3148,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = FQQXSP79X3;
 				INFOPLIST_FILE = MastonautTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ph.bruno.MastonautTests;
+				PRODUCT_BUNDLE_IDENTIFIER = net.marquiskurt.MastonautTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mastonaut.app/Contents/MacOS/Mastonaut";
@@ -3238,7 +3274,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 135;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = FQQXSP79X3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Mastonaut/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Mastonaut++";
@@ -3260,17 +3296,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = FQQXSP79X3;
 				INFOPLIST_FILE = MastonautTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ph.bruno.MastonautTests;
+				PRODUCT_BUNDLE_IDENTIFIER = net.marquiskurt.MastonautTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mastonaut.app/Contents/MacOS/Mastonaut";
@@ -3378,6 +3415,30 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		957BA46C2947ADDB0050AD11 /* MastodonKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MastodonKit;
+		};
+		957BA46E2947ADDE0050AD11 /* Starscream */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95F52B0929477BF3000C1555 /* XCRemoteSwiftPackageReference "Starscream" */;
+			productName = Starscream;
+		};
+		957BA4702947ADE00050AD11 /* CocoaLumberjack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95F52B0C29477C12000C1555 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjack;
+		};
+		957BA4722947ADE30050AD11 /* SVGKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95F52B1329477C3C000C1555 /* XCRemoteSwiftPackageReference "SVGKit" */;
+			productName = SVGKit;
+		};
+		957BA4742947ADE70050AD11 /* AckGen */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95CD3F1929478666002C03FE /* XCRemoteSwiftPackageReference "AckGen" */;
+			productName = AckGen;
+		};
 		95CD3F1A29478666002C03FE /* AckGen */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 95CD3F1929478666002C03FE /* XCRemoteSwiftPackageReference "AckGen" */;

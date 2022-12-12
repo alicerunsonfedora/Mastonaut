@@ -144,12 +144,6 @@ class AnimatableEmojiCell: NSTextAttachmentCell
 			else
 			{
 				offsetRect.origin.x += spacing
-
-				// FIXME: Find out why this offset varies from 10.14 to 10.15
-				if #available(OSX 10.15, *) {} else
-				{
-					offsetRect.origin.y -= round(font?.descender ?? 0)
-				}
 			}
 
 			imageView.frame = offsetRect

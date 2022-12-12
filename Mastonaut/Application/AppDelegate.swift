@@ -20,6 +20,7 @@
 import Cocoa
 import MastodonKit
 import CoreTootin
+import UserNotifications
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate
@@ -132,17 +133,19 @@ class AppDelegate: NSObject, NSApplicationDelegate
 		}
 
 		if let userInfoDict = notification.userInfo,
-			let userNotification = userInfoDict[NSApplication.launchUserNotificationUserInfoKey] as? NSUserNotification,
-			let payload = userNotification.payload
+			let userNotification = userInfoDict[NSApplication.launchUserNotificationUserInfoKey] as? UNNotification,
+		   let payload = userNotification.request.content.currentPayload
 		{
 			showTimelinesWindow(for: payload)
-			NSUserNotificationCenter.default.removeDeliveredNotification(userNotification)
+			UNUserNotificationCenter.current().removeDeliveredNotifications(
+				withIdentifiers: [userNotification.request.identifier]
+			)
 		}
 
 		// Refresh our local cache of the authorized users info
 		authController.updateAllAccountsLocalInfo()
 
-		NSUserNotificationCenter.default.delegate = self
+		UNUserNotificationCenter.current().delegate = self
 
 		#if DEBUG
 		windowMenu.addItem(.separator())
@@ -657,31 +660,30 @@ extension AppDelegate: AuthControllerDelegate
 
 // MARK: - User Notification Center Delegate
 
-extension AppDelegate: NSUserNotificationCenterDelegate
+extension AppDelegate: UNUserNotificationCenterDelegate
 {
-	func userNotificationCenter(_ center: NSUserNotificationCenter, didActivate notification: NSUserNotification)
+	func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse) async
 	{
-		if let payload = notification.payload
+		if let payload = response.notification.request.content.currentPayload
 		{
 			showTimelinesWindow(for: payload)
 		}
-
-		NSUserNotificationCenter.default.removeDeliveredNotification(notification)
+		center.removeDeliveredNotifications(withIdentifiers: [response.notification.request.identifier])
 	}
 
-	func userNotificationCenter(_ center: NSUserNotificationCenter,
-								shouldPresent notification: NSUserNotification) -> Bool {
-
-		guard let payload = notification.payload else { return false }
-
+	func userNotificationCenter(
+		_ center: UNUserNotificationCenter,
+		willPresent notification: UNNotification
+	) async -> UNNotificationPresentationOptions {
+		guard let payload = notification.request.content.currentPayload else { return .banner }
 		let uuid = payload.accountUUID
+		guard let controller = findBestTimelinesWindowController(forAccount: uuid),
+				await controller.hasNotificationsColumn else
+		{
+			return .banner
+		}
 
-		guard
-			let controller = findBestTimelinesWindowController(forAccount: uuid),
-			controller.hasNotificationsColumn
-		else { return true }
-
-		return controller.window?.occlusionState.contains(.visible) != true
+			return await controller.window?.occlusionState.contains(.visible) != true ? .banner : .banner
 	}
 
 	private func showTimelinesWindow(for notificationPayload: NotificationPayload)
@@ -702,7 +704,7 @@ extension AppDelegate: NSUserNotificationCenterDelegate
 		else if
 			let account = accountsService.authorizedAccounts.first(where: { $0.uuid == uuid }),
 			let controller = findTimelinesWindowControllerWithNoAccount()
-								?? makeNewTimelinesWindow(forDecoder: false)
+				?? makeNewTimelinesWindow(forDecoder: false)
 		{
 			controller.currentAccount = account
 			showDetailForNotification(mode, in: controller)
@@ -712,17 +714,17 @@ extension AppDelegate: NSUserNotificationCenterDelegate
 	private func findBestTimelinesWindowController(forAccount uuid: UUID) -> TimelinesWindowController?
 	{
 		return timelineWindowControllers
-				.filter({ $0.currentAccount?.uuid == uuid && $0.hasNotificationsColumn })
-				.sorted(by: { ($0.window?.orderedIndex ?? -1) > ($1.window?.orderedIndex ?? -1) })
-				.first
+			.filter({ $0.currentAccount?.uuid == uuid && $0.hasNotificationsColumn })
+			.sorted(by: { ($0.window?.orderedIndex ?? -1) > ($1.window?.orderedIndex ?? -1) })
+			.first
 	}
 
 	private func findTimelinesWindowControllerWithNoAccount() -> TimelinesWindowController?
 	{
 		return timelineWindowControllers
-				.filter({ $0.currentAccount?.uuid == nil })
-				.sorted(by: { ($0.window?.orderedIndex ?? -1) > ($1.window?.orderedIndex ?? -1) })
-				.first
+			.filter({ $0.currentAccount?.uuid == nil })
+			.sorted(by: { ($0.window?.orderedIndex ?? -1) > ($1.window?.orderedIndex ?? -1) })
+			.first
 	}
 
 	private func showDetailForNotification(_ mode: SidebarMode, in controller: TimelinesWindowController)
