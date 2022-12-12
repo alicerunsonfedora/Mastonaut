@@ -201,7 +201,6 @@
 		155A9378232D97040055C667 /* NSImage+Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155A9377232D97040055C667 /* NSImage+Resources.swift */; };
 		155B9389237A23E5006EBF3C /* AnyObject+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155B9388237A23E5006EBF3C /* AnyObject+Helpers.swift */; };
 		155B938A237A23E5006EBF3C /* AnyObject+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155B9388237A23E5006EBF3C /* AnyObject+Helpers.swift */; };
-		155EDC24229B3E5700F1226A /* ReceiptValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 155EDC22229B3E5700F1226A /* ReceiptValidation.m */; };
 		15608F45232C4DED00923CB7 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15608F44232C4DED00923CB7 /* ShareViewController.swift */; };
 		15608F48232C4DED00923CB7 /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15608F46232C4DED00923CB7 /* ShareViewController.xib */; };
 		15608F4D232C4DED00923CB7 /* QuickToot.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 15608F40232C4DED00923CB7 /* QuickToot.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -215,7 +214,6 @@
 		156C114F225012E100C54592 /* AvatarImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98AE161223D7FB700A8DD22 /* AvatarImageCache.swift */; };
 		156C115122516B1900C54592 /* ProfileFieldsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156C115022516B1900C54592 /* ProfileFieldsController.swift */; };
 		156C115222516B1900C54592 /* ProfileFieldsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156C115022516B1900C54592 /* ProfileFieldsController.swift */; };
-		156F7A6023FB3F1E0061ABFB /* ReceiptValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 155EDC22229B3E5700F1226A /* ReceiptValidation.m */; };
 		156F7A6123FB3F210061ABFB /* GetMACAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 1596DB43235F65A100B349B7 /* GetMACAddress.m */; };
 		15722EA822123D2A00A672C6 /* ClickThroughTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15722EA722123D2A00A672C6 /* ClickThroughTextField.swift */; };
 		15722EA922123D2A00A672C6 /* ClickThroughTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15722EA722123D2A00A672C6 /* ClickThroughTextField.swift */; };
@@ -738,8 +736,6 @@
 		155E55C7220F99D800F00091 /* Promise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
 		155E55CA221047BA00F00091 /* NSImage+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+Additions.swift"; sourceTree = "<group>"; };
 		155E55CD22105EE800F00091 /* AttachmentUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentUploader.swift; sourceTree = "<group>"; };
-		155EDC22229B3E5700F1226A /* ReceiptValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiptValidation.m; sourceTree = "<group>"; };
-		155EDC23229B3E5700F1226A /* ReceiptValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiptValidation.h; sourceTree = "<group>"; };
 		15608F40232C4DED00923CB7 /* QuickToot.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = QuickToot.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		15608F44232C4DED00923CB7 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		15608F47232C4DED00923CB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ShareViewController.xib; sourceTree = "<group>"; };
@@ -1042,8 +1038,6 @@
 				153B23902345763F00A317A2 /* MenuItemFactory.swift */,
 				1552D6E82286576C009B4BBD /* MenuItemsControllers.swift */,
 				1538FB3822188CCA006B5F78 /* PropertyObserver.swift */,
-				155EDC23229B3E5700F1226A /* ReceiptValidation.h */,
-				155EDC22229B3E5700F1226A /* ReceiptValidation.m */,
 				15082D542312CA3A0075BB1D /* ReconnectModerator.swift */,
 				1552D6EB22871122009B4BBD /* ShareMenuFactory.swift */,
 				15BC415A2262A65F00C2A150 /* TimelinesWindowRestoration.swift */,
@@ -2164,6 +2158,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Acknowledgements.plist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2308,7 +2303,6 @@
 				15F1D24C21F2999500B01F35 /* AnimatableEmojiCell.swift in Sources */,
 				15E973BF225A1B8E009CE4DF /* Cache.swift in Sources */,
 				15DDC05B24B0E3D900F6F1EE /* NoInsetsTableView.swift in Sources */,
-				156F7A6023FB3F1E0061ABFB /* ReceiptValidation.m in Sources */,
 				15EE539422C956E2001BEA58 /* SearchViewController.swift in Sources */,
 				15BC41622262A91300C2A150 /* SidebarMode.swift in Sources */,
 				15D648E72275CC6400E083F7 /* AnimatedImageView.swift in Sources */,
@@ -2567,7 +2561,6 @@
 				15845E342438EAE7006DF182 /* TimelinesSplitViewController.swift in Sources */,
 				1552D6EC22871122009B4BBD /* ShareMenuFactory.swift in Sources */,
 				15C4DD4121D4280A002AF6DA /* StatusTableCellView.swift in Sources */,
-				155EDC24229B3E5700F1226A /* ReceiptValidation.m in Sources */,
 				15DED9C12298B1D1000F11B8 /* FocusedStatusTableCellView.swift in Sources */,
 				159C2178232C622E00139BD5 /* AuthorizedAccount+MenuItems.swift in Sources */,
 				15213684230F352400B1FE02 /* AccountPreferences+Enums.swift in Sources */,

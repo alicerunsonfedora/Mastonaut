@@ -21,6 +21,7 @@ import Cocoa
 import MastodonKit
 import CoreTootin
 
+@main
 class AppDelegate: NSObject, NSApplicationDelegate
 {
 	@IBOutlet private weak var windowMenu: NSMenu!
