@@ -156,7 +156,9 @@ private extension KeychainController // Helpers
 	/// - Throws: Errors.secItemError
 	func storeData(_ data: Data, account: String) throws
 	{
-		internalKeychainAccess[data: account] = data
+		DispatchQueue.global().async { [weak self] in
+			self?.internalKeychainAccess[data: account] = data
+		}
 	}
 
 	/// Delete a storable from the keychain. If `useGroupIfPossible` is `false`, will always try deleting from the

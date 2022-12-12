@@ -507,7 +507,6 @@
 		957BA4712947ADE00050AD11 /* CocoaLumberjack in Frameworks */ = {isa = PBXBuildFile; productRef = 957BA4702947ADE00050AD11 /* CocoaLumberjack */; };
 		957BA4732947ADE30050AD11 /* SVGKit in Frameworks */ = {isa = PBXBuildFile; productRef = 957BA4722947ADE30050AD11 /* SVGKit */; };
 		957BA4752947ADE70050AD11 /* AckGen in Frameworks */ = {isa = PBXBuildFile; productRef = 957BA4742947ADE70050AD11 /* AckGen */; };
-		957BA4782947CB880050AD11 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 957BA4772947CB880050AD11 /* KeychainAccess */; };
 		957BA47A2947CBB10050AD11 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 957BA4792947CBB10050AD11 /* KeychainAccess */; };
 		95CD3F1B29478666002C03FE /* AckGen in Frameworks */ = {isa = PBXBuildFile; productRef = 95CD3F1A29478666002C03FE /* AckGen */; };
 		95CD3F1D29478666002C03FE /* AckGenUI in Frameworks */ = {isa = PBXBuildFile; productRef = 95CD3F1C29478666002C03FE /* AckGenUI */; };
@@ -985,7 +984,6 @@
 				95F52B1229477C12000C1555 /* CocoaLumberjackSwiftLogBackend in Frameworks */,
 				95CD3F1B29478666002C03FE /* AckGen in Frameworks */,
 				154478A6232B0223009C71D4 /* CoreTootin.framework in Frameworks */,
-				957BA4782947CB880050AD11 /* KeychainAccess in Frameworks */,
 				95F52B0E29477C12000C1555 /* CocoaLumberjack in Frameworks */,
 				95F52B1529477C3C000C1555 /* SVGKit in Frameworks */,
 				95F52B0B29477BF3000C1555 /* Starscream in Frameworks */,
@@ -1856,7 +1854,6 @@
 				95F52B1A29477DA7000C1555 /* MastodonKit */,
 				95CD3F1A29478666002C03FE /* AckGen */,
 				95CD3F1C29478666002C03FE /* AckGenUI */,
-				957BA4772947CB880050AD11 /* KeychainAccess */,
 			);
 			productName = Sengi;
 			productReference = 15C4DD0C21D41EC0002AF6DA /* Mastonaut.app */;
@@ -3444,11 +3441,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 95CD3F1929478666002C03FE /* XCRemoteSwiftPackageReference "AckGen" */;
 			productName = AckGen;
-		};
-		957BA4772947CB880050AD11 /* KeychainAccess */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 957BA4762947CB880050AD11 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
-			productName = KeychainAccess;
 		};
 		957BA4792947CBB10050AD11 /* KeychainAccess */ = {
 			isa = XCSwiftPackageProductDependency;
