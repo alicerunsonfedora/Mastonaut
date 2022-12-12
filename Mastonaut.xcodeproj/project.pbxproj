@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -107,7 +107,6 @@
 		15249AF123401C7D0088B9EE /* NonVibrantPopUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15249AEF23401C7D0088B9EE /* NonVibrantPopUpButton.swift */; };
 		1528BA1D228B52F60072068F /* MastonautTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1528BA1C228B52F60072068F /* MastonautTableCellView.swift */; };
 		1528BA1E228B52F60072068F /* MastonautTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1528BA1C228B52F60072068F /* MastonautTableCellView.swift */; };
-		152B7316220E34D3004121F1 /* Pods-Mastonaut-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 152B7315220E34D3004121F1 /* Pods-Mastonaut-acknowledgements.plist */; };
 		152B7317220E34D3004121F1 /* Pods-Mastonaut-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 152B7315220E34D3004121F1 /* Pods-Mastonaut-acknowledgements.plist */; };
 		152B731A220E35A7004121F1 /* AcknowledgementsWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152B7318220E35A7004121F1 /* AcknowledgementsWindowController.swift */; };
 		152B731B220E35A7004121F1 /* AcknowledgementsWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152B7318220E35A7004121F1 /* AcknowledgementsWindowController.swift */; };
@@ -505,12 +504,15 @@
 		15F9F30C232EB9E900931594 /* SuggestionWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1530428122AEC64E00489F31 /* SuggestionWindowController.xib */; };
 		15FD4C33223870B000D699EF /* TransientWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FD4C32223870B000D699EF /* TransientWindow.swift */; };
 		15FD4C34223870B000D699EF /* TransientWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FD4C32223870B000D699EF /* TransientWindow.swift */; };
-		8018496C90237DCCDED54D8E /* Pods_Mastonaut.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 092B4EA6357A3987C4DB12B9 /* Pods_Mastonaut.framework */; };
-		9BF0CEF5AD6BE645406760FA /* Pods_Mastonaut__Mock_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0D2DCB52811AC15559D8AE9 /* Pods_Mastonaut__Mock_.framework */; };
-		BB0D8382B9BA154D27AFBC63 /* Pods_CoreTootin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C7A9AB62B40D2AFDAA70E9 /* Pods_CoreTootin.framework */; };
+		95F52B0B29477BF3000C1555 /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = 95F52B0A29477BF3000C1555 /* Starscream */; };
+		95F52B0E29477C12000C1555 /* CocoaLumberjack in Frameworks */ = {isa = PBXBuildFile; productRef = 95F52B0D29477C12000C1555 /* CocoaLumberjack */; };
+		95F52B1029477C12000C1555 /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 95F52B0F29477C12000C1555 /* CocoaLumberjackSwift */; };
+		95F52B1229477C12000C1555 /* CocoaLumberjackSwiftLogBackend in Frameworks */ = {isa = PBXBuildFile; productRef = 95F52B1129477C12000C1555 /* CocoaLumberjackSwiftLogBackend */; };
+		95F52B1529477C3C000C1555 /* SVGKit in Frameworks */ = {isa = PBXBuildFile; productRef = 95F52B1429477C3C000C1555 /* SVGKit */; };
+		95F52B1B29477DA7000C1555 /* MastodonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 95F52B1A29477DA7000C1555 /* MastodonKit */; };
+		95F52B1D29477DE6000C1555 /* MastodonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 95F52B1C29477DE6000C1555 /* MastodonKit */; };
+		95F52B1F29477E16000C1555 /* MastodonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 95F52B1E29477E16000C1555 /* MastodonKit */; };
 		C98AE162223D7FB700A8DD22 /* AvatarImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98AE161223D7FB700A8DD22 /* AvatarImageCache.swift */; };
-		E7D99EDB7E2A091BF870FD6E /* Pods_QuickToot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BCC49A8ECAB04865B510BFF /* Pods_QuickToot.framework */; };
-		FFCDECEB3FA1B6319EDD0664 /* Pods_MastonautTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D6AE63926CBA301063B221 /* Pods_MastonautTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -601,10 +603,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		07C7A9AB62B40D2AFDAA70E9 /* Pods_CoreTootin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreTootin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		092B4EA6357A3987C4DB12B9 /* Pods_Mastonaut.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mastonaut.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B7A2C8DE3669FF5A4460252 /* Pods-CoreTootin.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreTootin.adhoc.xcconfig"; path = "Target Support Files/Pods-CoreTootin/Pods-CoreTootin.adhoc.xcconfig"; sourceTree = "<group>"; };
-		138F88E5ACCF5B96FAF3AA4D /* Pods-MastonautTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MastonautTests.debug.xcconfig"; path = "Target Support Files/Pods-MastonautTests/Pods-MastonautTests.debug.xcconfig"; sourceTree = "<group>"; };
 		15032604247F297600F02E83 /* MastonautDebug.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = MastonautDebug.icns; sourceTree = "<group>"; };
 		150443A32208750000D9018F /* AboutWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutWindowController.swift; sourceTree = "<group>"; };
 		150443A42208750000D9018F /* AboutWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutWindowController.xib; sourceTree = "<group>"; };
@@ -927,24 +925,9 @@
 		15FD4C32223870B000D699EF /* TransientWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransientWindow.swift; sourceTree = "<group>"; };
 		15FD4C382238853600D699EF /* ProposedAttachmentItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProposedAttachmentItem.swift; sourceTree = "<group>"; };
 		15FD4C392238853600D699EF /* ProposedAttachmentItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProposedAttachmentItem.xib; sourceTree = "<group>"; };
-		198B5295B015AD858387A52D /* Pods-MastonautTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MastonautTests.release.xcconfig"; path = "Target Support Files/Pods-MastonautTests/Pods-MastonautTests.release.xcconfig"; sourceTree = "<group>"; };
-		35D6AE63926CBA301063B221 /* Pods_MastonautTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MastonautTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3616DEA53A719762EAC8196D /* Pods-QuickToot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickToot.debug.xcconfig"; path = "Target Support Files/Pods-QuickToot/Pods-QuickToot.debug.xcconfig"; sourceTree = "<group>"; };
-		39AA9CF1114711021688EDCD /* Pods-QuickToot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickToot.release.xcconfig"; path = "Target Support Files/Pods-QuickToot/Pods-QuickToot.release.xcconfig"; sourceTree = "<group>"; };
-		451D67EA024CBB6908731041 /* Pods-CoreTootin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreTootin.debug.xcconfig"; path = "Target Support Files/Pods-CoreTootin/Pods-CoreTootin.debug.xcconfig"; sourceTree = "<group>"; };
-		4BCC49A8ECAB04865B510BFF /* Pods_QuickToot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickToot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		613EECFE95639DB968A362BE /* Pods-QuickToot.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickToot.adhoc.xcconfig"; path = "Target Support Files/Pods-QuickToot/Pods-QuickToot.adhoc.xcconfig"; sourceTree = "<group>"; };
-		7AEAB27D6CB6D651C5299936 /* Pods-MastonautTests.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MastonautTests.adhoc.xcconfig"; path = "Target Support Files/Pods-MastonautTests/Pods-MastonautTests.adhoc.xcconfig"; sourceTree = "<group>"; };
-		8BE1B4746437CF8AAE269D73 /* Pods-Mastonaut (Mock).adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mastonaut (Mock).adhoc.xcconfig"; path = "Target Support Files/Pods-Mastonaut (Mock)/Pods-Mastonaut (Mock).adhoc.xcconfig"; sourceTree = "<group>"; };
 		95F52B082943C870000C1555 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		BDA5F885C761EEC9A0A80081 /* Pods-Mastonaut (Mock).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mastonaut (Mock).release.xcconfig"; path = "Target Support Files/Pods-Mastonaut (Mock)/Pods-Mastonaut (Mock).release.xcconfig"; sourceTree = "<group>"; };
+		95F52B1929477C4B000C1555 /* MastodonKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MastodonKit; path = Dependencies/MastodonKit; sourceTree = "<group>"; };
 		C98AE161223D7FB700A8DD22 /* AvatarImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageCache.swift; sourceTree = "<group>"; };
-		D052D8D7DC75AE86FA6E38F0 /* Pods-Mastonaut.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mastonaut.adhoc.xcconfig"; path = "Target Support Files/Pods-Mastonaut/Pods-Mastonaut.adhoc.xcconfig"; sourceTree = "<group>"; };
-		D0D2DCB52811AC15559D8AE9 /* Pods_Mastonaut__Mock_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mastonaut__Mock_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4947F11B85059EE85BA2857 /* Pods-Mastonaut (Mock).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mastonaut (Mock).debug.xcconfig"; path = "Target Support Files/Pods-Mastonaut (Mock)/Pods-Mastonaut (Mock).debug.xcconfig"; sourceTree = "<group>"; };
-		E74672D331A888BC3C6D1512 /* Pods-CoreTootin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreTootin.release.xcconfig"; path = "Target Support Files/Pods-CoreTootin/Pods-CoreTootin.release.xcconfig"; sourceTree = "<group>"; };
-		E884A5BDB042D4FBEE510962 /* Pods-Mastonaut.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mastonaut.release.xcconfig"; path = "Target Support Files/Pods-Mastonaut/Pods-Mastonaut.release.xcconfig"; sourceTree = "<group>"; };
-		F78A836510592DFADE095479 /* Pods-Mastonaut.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mastonaut.debug.xcconfig"; path = "Target Support Files/Pods-Mastonaut/Pods-Mastonaut.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -952,7 +935,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BF0CEF5AD6BE645406760FA /* Pods_Mastonaut__Mock_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -960,7 +942,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB0D8382B9BA154D27AFBC63 /* Pods_CoreTootin.framework in Frameworks */,
+				95F52B1D29477DE6000C1555 /* MastodonKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -968,7 +950,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7D99EDB7E2A091BF870FD6E /* Pods_QuickToot.framework in Frameworks */,
+				95F52B1F29477E16000C1555 /* MastodonKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -978,8 +960,13 @@
 			files = (
 				1596DB46235F65D300B349B7 /* DirectoryService.framework in Frameworks */,
 				15765563229692C200783FFE /* AVKit.framework in Frameworks */,
+				95F52B1029477C12000C1555 /* CocoaLumberjackSwift in Frameworks */,
+				95F52B1B29477DA7000C1555 /* MastodonKit in Frameworks */,
+				95F52B1229477C12000C1555 /* CocoaLumberjackSwiftLogBackend in Frameworks */,
 				154478A6232B0223009C71D4 /* CoreTootin.framework in Frameworks */,
-				8018496C90237DCCDED54D8E /* Pods_Mastonaut.framework in Frameworks */,
+				95F52B0E29477C12000C1555 /* CocoaLumberjack in Frameworks */,
+				95F52B1529477C3C000C1555 /* SVGKit in Frameworks */,
+				95F52B0B29477BF3000C1555 /* Starscream in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -987,7 +974,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFCDECEB3FA1B6319EDD0664 /* Pods_MastonautTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1436,6 +1422,7 @@
 		15C4DD0321D41EC0002AF6DA = {
 			isa = PBXGroup;
 			children = (
+				95F52B1829477C4B000C1555 /* Packages */,
 				95F52B082943C870000C1555 /* README.md */,
 				15C4DD0E21D41EC0002AF6DA /* Mastonaut */,
 				1512DB82221B8D030090F2BD /* Dependencies */,
@@ -1444,7 +1431,6 @@
 				15608F41232C4DED00923CB7 /* QuickToot */,
 				15C4DD0D21D41EC0002AF6DA /* Products */,
 				98ECDB4860F1D57879765C05 /* Frameworks */,
-				C80DDFC734FDDE3DEF0D36B2 /* Pods */,
 			);
 			sourceTree = "<group>";
 			usesTabs = 1;
@@ -1719,40 +1705,21 @@
 			path = "Window Controllers";
 			sourceTree = "<group>";
 		};
+		95F52B1829477C4B000C1555 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				95F52B1929477C4B000C1555 /* MastodonKit */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		98ECDB4860F1D57879765C05 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				1596DB45235F65D300B349B7 /* DirectoryService.framework */,
 				15765562229692C200783FFE /* AVKit.framework */,
-				07C7A9AB62B40D2AFDAA70E9 /* Pods_CoreTootin.framework */,
-				092B4EA6357A3987C4DB12B9 /* Pods_Mastonaut.framework */,
-				D0D2DCB52811AC15559D8AE9 /* Pods_Mastonaut__Mock_.framework */,
-				35D6AE63926CBA301063B221 /* Pods_MastonautTests.framework */,
-				4BCC49A8ECAB04865B510BFF /* Pods_QuickToot.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C80DDFC734FDDE3DEF0D36B2 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				451D67EA024CBB6908731041 /* Pods-CoreTootin.debug.xcconfig */,
-				E74672D331A888BC3C6D1512 /* Pods-CoreTootin.release.xcconfig */,
-				0B7A2C8DE3669FF5A4460252 /* Pods-CoreTootin.adhoc.xcconfig */,
-				F78A836510592DFADE095479 /* Pods-Mastonaut.debug.xcconfig */,
-				E884A5BDB042D4FBEE510962 /* Pods-Mastonaut.release.xcconfig */,
-				D052D8D7DC75AE86FA6E38F0 /* Pods-Mastonaut.adhoc.xcconfig */,
-				D4947F11B85059EE85BA2857 /* Pods-Mastonaut (Mock).debug.xcconfig */,
-				BDA5F885C761EEC9A0A80081 /* Pods-Mastonaut (Mock).release.xcconfig */,
-				8BE1B4746437CF8AAE269D73 /* Pods-Mastonaut (Mock).adhoc.xcconfig */,
-				138F88E5ACCF5B96FAF3AA4D /* Pods-MastonautTests.debug.xcconfig */,
-				198B5295B015AD858387A52D /* Pods-MastonautTests.release.xcconfig */,
-				7AEAB27D6CB6D651C5299936 /* Pods-MastonautTests.adhoc.xcconfig */,
-				3616DEA53A719762EAC8196D /* Pods-QuickToot.debug.xcconfig */,
-				39AA9CF1114711021688EDCD /* Pods-QuickToot.release.xcconfig */,
-				613EECFE95639DB968A362BE /* Pods-QuickToot.adhoc.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1774,14 +1741,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1523C70F21E94C7F006DE234 /* Build configuration list for PBXNativeTarget "Mastonaut (Mock)" */;
 			buildPhases = (
-				E3D1835CB9E12FC3C375D442 /* [CP] Check Pods Manifest.lock */,
 				1528744822A504CC008994BD /* Generate Versions Header */,
 				1523C6DE21E94C7F006DE234 /* Sources */,
 				1523C6FC21E94C7F006DE234 /* Frameworks */,
 				1523C6FE21E94C7F006DE234 /* Resources */,
 				1523C70E21E94C7F006DE234 /* Embed Frameworks */,
 				15370A98224C5AD0003DA836 /* Bump Build */,
-				6436B09BCFC968AC2F621A36 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1798,7 +1763,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 154478A8232B0223009C71D4 /* Build configuration list for PBXNativeTarget "CoreTootin" */;
 			buildPhases = (
-				45D13E3CEF34BB222C3913E0 /* [CP] Check Pods Manifest.lock */,
 				1544789A232B0223009C71D4 /* Headers */,
 				1544789B232B0223009C71D4 /* Sources */,
 				1544789C232B0223009C71D4 /* Frameworks */,
@@ -1809,6 +1773,9 @@
 			dependencies = (
 			);
 			name = CoreTootin;
+			packageProductDependencies = (
+				95F52B1C29477DE6000C1555 /* MastodonKit */,
+			);
 			productName = CoreTootin;
 			productReference = 1544789F232B0223009C71D4 /* CoreTootin.framework */;
 			productType = "com.apple.product-type.framework";
@@ -1817,7 +1784,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15608F51232C4DED00923CB7 /* Build configuration list for PBXNativeTarget "QuickToot" */;
 			buildPhases = (
-				B07E0C28E3DF5885262C681D /* [CP] Check Pods Manifest.lock */,
 				15608F3C232C4DED00923CB7 /* Sources */,
 				15608F3D232C4DED00923CB7 /* Frameworks */,
 				15608F3E232C4DED00923CB7 /* Resources */,
@@ -1828,6 +1794,9 @@
 				15A22B83232C5289009D5637 /* PBXTargetDependency */,
 			);
 			name = QuickToot;
+			packageProductDependencies = (
+				95F52B1E29477E16000C1555 /* MastodonKit */,
+			);
 			productName = QuickToot;
 			productReference = 15608F40232C4DED00923CB7 /* QuickToot.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -1836,7 +1805,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15C4DD3321D41EC0002AF6DA /* Build configuration list for PBXNativeTarget "Mastonaut" */;
 			buildPhases = (
-				752307ABF5C15A74C4BD27F5 /* [CP] Check Pods Manifest.lock */,
 				15FA215B229B378D00B86DC6 /* Generate Versions Header */,
 				15C4DD0821D41EC0002AF6DA /* Sources */,
 				15C4DD0921D41EC0002AF6DA /* Frameworks */,
@@ -1844,7 +1812,6 @@
 				1507923D21D6E229009EE4A3 /* Embed Frameworks */,
 				15370A97224C5A66003DA836 /* Bump Build */,
 				15447880232AF942009C71D4 /* Embed Foundation Extensions */,
-				BEDC31C53C21942AE6E1D83E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1853,6 +1820,14 @@
 				15608F4C232C4DED00923CB7 /* PBXTargetDependency */,
 			);
 			name = Mastonaut;
+			packageProductDependencies = (
+				95F52B0A29477BF3000C1555 /* Starscream */,
+				95F52B0D29477C12000C1555 /* CocoaLumberjack */,
+				95F52B0F29477C12000C1555 /* CocoaLumberjackSwift */,
+				95F52B1129477C12000C1555 /* CocoaLumberjackSwiftLogBackend */,
+				95F52B1429477C3C000C1555 /* SVGKit */,
+				95F52B1A29477DA7000C1555 /* MastodonKit */,
+			);
 			productName = Sengi;
 			productReference = 15C4DD0C21D41EC0002AF6DA /* Mastonaut.app */;
 			productType = "com.apple.product-type.application";
@@ -1861,7 +1836,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15DE367B22443FFA00480949 /* Build configuration list for PBXNativeTarget "MastonautTests" */;
 			buildPhases = (
-				B5FD46E31CEC61CB417C61AF /* [CP] Check Pods Manifest.lock */,
 				15DE367022443FF900480949 /* Sources */,
 				15DE367122443FF900480949 /* Frameworks */,
 				15DE367222443FF900480949 /* Resources */,
@@ -1928,6 +1902,11 @@
 				Base,
 			);
 			mainGroup = 15C4DD0321D41EC0002AF6DA;
+			packageReferences = (
+				95F52B0929477BF3000C1555 /* XCRemoteSwiftPackageReference "Starscream" */,
+				95F52B0C29477C12000C1555 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */,
+				95F52B1329477C3C000C1555 /* XCRemoteSwiftPackageReference "SVGKit" */,
+			);
 			productRefGroup = 15C4DD0D21D41EC0002AF6DA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -2067,7 +2046,6 @@
 				15CD5BD421DAC76B00E06C2F /* AuthWindowController.xib in Resources */,
 				152DA65221E3FCB40065CC1B /* TripleAttachmentView.xib in Resources */,
 				15B25D02265164BF00C90963 /* FilterTableCellView.xib in Resources */,
-				152B7316220E34D3004121F1 /* Pods-Mastonaut-acknowledgements.plist in Resources */,
 				152DA64C21E3FA180065CC1B /* SingleAttachmentView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2160,150 +2138,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "BUNDLE_VERSION=$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' $SRCROOT/Mastonaut/Supporting\\ Files/Info.plist)\necho \"#define BUNDLE_VERSION \\\"$MARKETING_VERSION\\\"\" > $DERIVED_FILE_DIR/BundleVersions.h\n";
-		};
-		45D13E3CEF34BB222C3913E0 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CoreTootin-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6436B09BCFC968AC2F621A36 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Mastonaut (Mock)/Pods-Mastonaut (Mock)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Mastonaut (Mock)/Pods-Mastonaut (Mock)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mastonaut (Mock)/Pods-Mastonaut (Mock)-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		752307ABF5C15A74C4BD27F5 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Mastonaut-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B07E0C28E3DF5885262C681D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-QuickToot-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B5FD46E31CEC61CB417C61AF /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MastonautTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BEDC31C53C21942AE6E1D83E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Mastonaut/Pods-Mastonaut-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Mastonaut/Pods-Mastonaut-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mastonaut/Pods-Mastonaut-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E3D1835CB9E12FC3C375D442 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Mastonaut (Mock)-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -2808,7 +2642,6 @@
 /* Begin XCBuildConfiguration section */
 		1523C71021E94C7F006DE234 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D4947F11B85059EE85BA2857 /* Pods-Mastonaut (Mock).debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -2839,7 +2672,6 @@
 		};
 		1523C71121E94C7F006DE234 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BDA5F885C761EEC9A0A80081 /* Pods-Mastonaut (Mock).release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -2869,7 +2701,6 @@
 		};
 		154478A9232B0223009C71D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 451D67EA024CBB6908731041 /* Pods-CoreTootin.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -2904,7 +2735,6 @@
 		};
 		154478AA232B0223009C71D4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E74672D331A888BC3C6D1512 /* Pods-CoreTootin.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -2938,7 +2768,6 @@
 		};
 		154478AB232B0223009C71D4 /* AdHoc */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B7A2C8DE3669FF5A4460252 /* Pods-CoreTootin.adhoc.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -2973,7 +2802,6 @@
 		};
 		15608F4E232C4DED00923CB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3616DEA53A719762EAC8196D /* Pods-QuickToot.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = QuickToot/QuickToot.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -3000,7 +2828,6 @@
 		};
 		15608F4F232C4DED00923CB7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 39AA9CF1114711021688EDCD /* Pods-QuickToot.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = QuickToot/QuickToot.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -3027,7 +2854,6 @@
 		};
 		15608F50232C4DED00923CB7 /* AdHoc */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 613EECFE95639DB968A362BE /* Pods-QuickToot.adhoc.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = QuickToot/QuickToot.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -3178,7 +3004,6 @@
 		};
 		15C4DD3421D41EC0002AF6DA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F78A836510592DFADE095479 /* Pods-Mastonaut.debug.xcconfig */;
 			buildSettings = {
 				APP_ICON_NAME = MastonautDebug;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -3211,7 +3036,6 @@
 		};
 		15C4DD3521D41EC0002AF6DA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E884A5BDB042D4FBEE510962 /* Pods-Mastonaut.release.xcconfig */;
 			buildSettings = {
 				APP_ICON_NAME = Mastonaut;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -3243,7 +3067,6 @@
 		};
 		15DE367C22443FFA00480949 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 138F88E5ACCF5B96FAF3AA4D /* Pods-MastonautTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -3256,7 +3079,6 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				PRODUCT_BUNDLE_IDENTIFIER = ph.bruno.MastonautTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -3266,7 +3088,6 @@
 		};
 		15DE367D22443FFA00480949 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 198B5295B015AD858387A52D /* Pods-MastonautTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -3279,7 +3100,6 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				PRODUCT_BUNDLE_IDENTIFIER = ph.bruno.MastonautTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -3355,7 +3175,6 @@
 		};
 		15FA2162229B3B6000B86DC6 /* AdHoc */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D052D8D7DC75AE86FA6E38F0 /* Pods-Mastonaut.adhoc.xcconfig */;
 			buildSettings = {
 				APP_ICON_NAME = MastonautDebug;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -3387,7 +3206,6 @@
 		};
 		15FA2163229B3B6000B86DC6 /* AdHoc */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8BE1B4746437CF8AAE269D73 /* Pods-Mastonaut (Mock).adhoc.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -3417,7 +3235,6 @@
 		};
 		15FA2164229B3B6000B86DC6 /* AdHoc */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7AEAB27D6CB6D651C5299936 /* Pods-MastonautTests.adhoc.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -3430,7 +3247,6 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				PRODUCT_BUNDLE_IDENTIFIER = ph.bruno.MastonautTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -3502,6 +3318,73 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		95F52B0929477BF3000C1555 /* XCRemoteSwiftPackageReference "Starscream" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/daltoniam/Starscream.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.0;
+			};
+		};
+		95F52B0C29477C12000C1555 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CocoaLumberjack/CocoaLumberjack.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		95F52B1329477C3C000C1555 /* XCRemoteSwiftPackageReference "SVGKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SVGKit/SVGKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		95F52B0A29477BF3000C1555 /* Starscream */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95F52B0929477BF3000C1555 /* XCRemoteSwiftPackageReference "Starscream" */;
+			productName = Starscream;
+		};
+		95F52B0D29477C12000C1555 /* CocoaLumberjack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95F52B0C29477C12000C1555 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjack;
+		};
+		95F52B0F29477C12000C1555 /* CocoaLumberjackSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95F52B0C29477C12000C1555 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjackSwift;
+		};
+		95F52B1129477C12000C1555 /* CocoaLumberjackSwiftLogBackend */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95F52B0C29477C12000C1555 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjackSwiftLogBackend;
+		};
+		95F52B1429477C3C000C1555 /* SVGKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95F52B1329477C3C000C1555 /* XCRemoteSwiftPackageReference "SVGKit" */;
+			productName = SVGKit;
+		};
+		95F52B1A29477DA7000C1555 /* MastodonKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MastodonKit;
+		};
+		95F52B1C29477DE6000C1555 /* MastodonKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MastodonKit;
+		};
+		95F52B1E29477E16000C1555 /* MastodonKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MastodonKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		152DA63421E1B3140065CC1B /* Mastonaut.xcdatamodeld */ = {
