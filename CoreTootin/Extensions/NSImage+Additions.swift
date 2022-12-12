@@ -18,6 +18,7 @@
 //
 
 import AppKit
+import UniformTypeIdentifiers
 
 public extension NSImage
 {
@@ -72,23 +73,22 @@ public extension NSImage
 							  .max(by: { ($0.pixelsWide * $0.pixelsHigh) < ($1.pixelsWide * $1.pixelsHigh) })
 	}
 
-	private static let utiTypeMap: [CFString: NSBitmapImageRep.FileType] = [
-		kUTTypePNG: .png,
-		kUTTypeJPEG: .jpeg,
-		kUTTypeJPEG2000: .jpeg2000,
-		kUTTypeGIF: .gif,
-		kUTTypeBMP: .bmp,
-		kUTTypeTIFF: .tiff
+	private static let utiTypeMap: [String: NSBitmapImageRep.FileType] = [
+		UTType.png.identifier: .png,
+		UTType.jpeg.identifier: .jpeg,
+		UTType.gif.identifier: .gif,
+		UTType.bmp.identifier: .bmp,
+		UTType.tiff.identifier: .tiff
 	]
 
-	func dataUsingRepresentation(for UTI: CFString?) throws -> Data
+	func dataUsingRepresentation(for UTI: String?) throws -> Data
 	{
 		guard let rawData = tiffRepresentation, let bitmap = NSBitmapImageRep(data: rawData) else
 		{
 			throw EncodeErrors.noRawData
 		}
 
-		guard let fileType = NSImage.utiTypeMap[UTI ?? kUTTypePNG] else
+		guard let fileType = NSImage.utiTypeMap[UTI ?? UTType.png.identifier] else
 		{
 			throw EncodeErrors.unknownExpectedFormat
 		}

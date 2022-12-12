@@ -20,6 +20,7 @@
 import AppKit
 import MastodonKit
 import CoreTootin
+import UniformTypeIdentifiers
 
 class AccountsPreferencesController: BaseAccountsPreferencesViewController
 {
@@ -64,7 +65,7 @@ class AccountsPreferencesController: BaseAccountsPreferencesViewController
 	private lazy var openPanel: NSOpenPanel = {
 		let panel = NSOpenPanel()
 		panel.allowsMultipleSelection = false
-		panel.allowedFileTypes = AttachmentUploader.supportedImageTypes.map({ $0 as String })
+		panel.allowedContentTypes = AttachmentUploader.supportedImageTypes.map({ UTType($0)! })
 		panel.message = 🔠("Select an image to upload.")
 		panel.prompt = 🔠("Upload")
 		return panel

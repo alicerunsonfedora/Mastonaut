@@ -19,6 +19,7 @@
 
 import AppKit
 import MastodonKit
+import UniformTypeIdentifiers
 
 public class Upload
 {
@@ -45,9 +46,9 @@ public class Upload
 	{
 		guard let preferredMimeType = fileUrl.preferredMimeType, let fileUTI = fileUrl.fileUTI else { return nil }
 
-		if UTTypeConformsTo(fileUTI as CFString, kUTTypeImage)
+		if UTType(fileUTI)?.conforms(to: UTType.image) == true
 		{
-			let restrainedType = imageRestrainer.restrain(type: fileUTI as CFString)
+			let restrainedType = imageRestrainer.restrain(type: fileUTI)
 			dataLoader = { try imageRestrainer.restrain(imageAtURL: fileUrl, fileUTI: restrainedType) }
 			mimeType = restrainedType as String
 		}
@@ -70,7 +71,7 @@ public class Upload
 		fileExtension = "png"
 		fileName = nil
 		mimeType = "image/png"
-		dataLoader = { try image.dataUsingRepresentation(for: kUTTypePNG) }
+		dataLoader = { try image.dataUsingRepresentation(for: UTType.png.identifier) }
 		thumbnailProvider = { image }
 
 		let selfPromise = WeakPromise<Upload>()

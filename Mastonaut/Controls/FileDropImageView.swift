@@ -21,7 +21,7 @@ import Cocoa
 
 class FileDropImageView: NSImageView
 {
-	var allowedDropFileTypes: [CFString]? = nil
+	var allowedDropFileTypes: [String]? = nil
 
 	private(set) var isReceivingDrag: Bool = false
 	{

@@ -20,6 +20,7 @@
 import Foundation
 import MastodonKit
 import AVFoundation
+import UniformTypeIdentifiers
 
 let kUTTypeHEIC = "public.heic" as CFString
 
@@ -27,15 +28,20 @@ public class AttachmentUploader
 {
 	public typealias ConvertedDataProvider = () throws -> Data
 
-	public static let supportedImageTypes = [kUTTypeJPEG, kUTTypePNG, kUTTypeJPEG2000, kUTTypeHEIC, kUTTypeGIF, kUTTypeTIFF]
-	public static let supportedMovieTypes = [kUTTypeMovie]
+	public static let supportedImageTypes = [
+		UTType.jpeg.identifier,
+		UTType.png.identifier,
+		UTType.heic.identifier,
+		UTType.gif.identifier,
+		UTType.tiff.identifier
+	]
+	public static let supportedMovieTypes = [UTType.movie.identifier]
 	public static let supportedAttachmentTypes = supportedImageTypes + supportedMovieTypes
 	public static let maxAttachmentImageSize = NSSize(width: 4096, height: 4096)
 
-	public static let imageTypeConversionMap: [CFString: CFString] = [
-		kUTTypeJPEG2000: kUTTypeJPEG,
-		kUTTypeHEIC: kUTTypeJPEG,
-		kUTTypeTIFF: kUTTypeJPEG
+	public static let imageTypeConversionMap: [String: String] = [
+		UTType.heic.identifier: UTType.jpeg.identifier,
+		UTType.tiff.identifier: UTType.jpeg.identifier
 	]
 
 	private var activeUploadFutures: [Upload: FutureTask] = [:]

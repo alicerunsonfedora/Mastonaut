@@ -49,12 +49,12 @@ public struct FileMetadataGenerator
 	{
 		assert(!Thread.isMainThread)
 
-		if fileUrl.fileConforms(toUTI: kUTTypeMovie)
+		if fileUrl.fileConforms(toUTI: UTType.movie.identifier)
 		{
 			let duration = AVURLAsset(url: fileUrl).duration.seconds
 			return .movie(duration: duration)
 		}
-		else if fileUrl.fileConforms(toUTI: kUTTypeImage)
+		else if fileUrl.fileConforms(toUTI: UTType.image.identifier)
 		{
 			guard
 				let imageSource = CGImageSourceCreateWithURL(fileUrl as CFURL, nil),

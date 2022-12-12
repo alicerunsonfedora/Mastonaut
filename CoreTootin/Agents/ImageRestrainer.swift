@@ -20,15 +20,15 @@
 import AppKit
 
 public class ImageRestrainer {
-	let typeConversionMap: [CFString: CFString]
+	let typeConversionMap: [String: String]
 	let maximumImageSize: NSSize
 
-	init(typeConversionMap: [CFString: CFString], maximumImageSize: NSSize) {
+	init(typeConversionMap: [String: String], maximumImageSize: NSSize) {
 		self.typeConversionMap = typeConversionMap
 		self.maximumImageSize = maximumImageSize
 	}
 
-	func restrain(imageAtURL fileURL: URL, fileUTI: CFString) throws -> Data {
+	func restrain(imageAtURL fileURL: URL, fileUTI: String) throws -> Data {
 		let restrainedFileUTI = restrain(type: fileUTI)
 
 		func fallbackData() throws -> Data {
@@ -52,7 +52,7 @@ public class ImageRestrainer {
 		guard originalSize.area >= maximumImageSize.area || restrainedFileUTI != fileUTI,
 			  let destinationData = CFDataCreateMutable(kCFAllocatorDefault, originalData.count),
 			  let imageDestination = CGImageDestinationCreateWithData(destinationData,
-																	  restrainedFileUTI,
+																	  restrainedFileUTI as CFString,
 																	  frameCount, nil)
 		else {
 			return originalData
@@ -91,7 +91,7 @@ public class ImageRestrainer {
 		return staticImage.resizedImage(withSize: newSize)
 	}
 
-	func restrain(type: CFString) -> CFString {
+	func restrain(type: String) -> String {
 		return typeConversionMap[type] ?? type
 	}
 }
