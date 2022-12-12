@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -664,7 +664,6 @@
 		15249AEB234012A80088B9EE /* InstanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceService.swift; sourceTree = "<group>"; };
 		15249AEF23401C7D0088B9EE /* NonVibrantPopUpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonVibrantPopUpButton.swift; sourceTree = "<group>"; };
 		1528BA1C228B52F60072068F /* MastonautTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MastonautTableCellView.swift; sourceTree = "<group>"; };
-		152B7315220E34D3004121F1 /* Pods-Mastonaut-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-Mastonaut-acknowledgements.plist"; path = "Pods/Target Support Files/Pods-Mastonaut/Pods-Mastonaut-acknowledgements.plist"; sourceTree = SOURCE_ROOT; };
 		152B7318220E35A7004121F1 /* AcknowledgementsWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementsWindowController.swift; sourceTree = "<group>"; };
 		152B7319220E35A7004121F1 /* AcknowledgementsWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AcknowledgementsWindowController.xib; sourceTree = "<group>"; };
 		152DA63521E1B3140065CC1B /* Mastonaut.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mastonaut.xcdatamodel; sourceTree = "<group>"; };
@@ -1518,7 +1517,6 @@
 				15C4DD1A21D41EC0002AF6DA /* Mastonaut.entitlements */,
 				15C4DD1921D41EC0002AF6DA /* Info.plist */,
 				152DA63921E2360E0065CC1B /* Mastonaut-Bridging-Header.h */,
-				152B7315220E34D3004121F1 /* Pods-Mastonaut-acknowledgements.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -2120,6 +2118,7 @@
 		};
 		15370A97224C5A66003DA836 /* Bump Build */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
