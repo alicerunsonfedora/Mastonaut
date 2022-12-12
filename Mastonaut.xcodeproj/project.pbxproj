@@ -504,6 +504,9 @@
 		15F9F30C232EB9E900931594 /* SuggestionWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1530428122AEC64E00489F31 /* SuggestionWindowController.xib */; };
 		15FD4C33223870B000D699EF /* TransientWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FD4C32223870B000D699EF /* TransientWindow.swift */; };
 		15FD4C34223870B000D699EF /* TransientWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FD4C32223870B000D699EF /* TransientWindow.swift */; };
+		95CD3F1B29478666002C03FE /* AckGen in Frameworks */ = {isa = PBXBuildFile; productRef = 95CD3F1A29478666002C03FE /* AckGen */; };
+		95CD3F1D29478666002C03FE /* AckGenUI in Frameworks */ = {isa = PBXBuildFile; productRef = 95CD3F1C29478666002C03FE /* AckGenUI */; };
+		95CD3F22294786B9002C03FE /* Acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95CD3F21294786B9002C03FE /* Acknowledgements.plist */; };
 		95F52B0B29477BF3000C1555 /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = 95F52B0A29477BF3000C1555 /* Starscream */; };
 		95F52B0E29477C12000C1555 /* CocoaLumberjack in Frameworks */ = {isa = PBXBuildFile; productRef = 95F52B0D29477C12000C1555 /* CocoaLumberjack */; };
 		95F52B1029477C12000C1555 /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 95F52B0F29477C12000C1555 /* CocoaLumberjackSwift */; };
@@ -925,6 +928,7 @@
 		15FD4C32223870B000D699EF /* TransientWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransientWindow.swift; sourceTree = "<group>"; };
 		15FD4C382238853600D699EF /* ProposedAttachmentItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProposedAttachmentItem.swift; sourceTree = "<group>"; };
 		15FD4C392238853600D699EF /* ProposedAttachmentItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProposedAttachmentItem.xib; sourceTree = "<group>"; };
+		95CD3F21294786B9002C03FE /* Acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Acknowledgements.plist; sourceTree = "<group>"; };
 		95F52B082943C870000C1555 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		95F52B1929477C4B000C1555 /* MastodonKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MastodonKit; path = Dependencies/MastodonKit; sourceTree = "<group>"; };
 		C98AE161223D7FB700A8DD22 /* AvatarImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageCache.swift; sourceTree = "<group>"; };
@@ -958,11 +962,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95CD3F1D29478666002C03FE /* AckGenUI in Frameworks */,
 				1596DB46235F65D300B349B7 /* DirectoryService.framework in Frameworks */,
 				15765563229692C200783FFE /* AVKit.framework in Frameworks */,
 				95F52B1029477C12000C1555 /* CocoaLumberjackSwift in Frameworks */,
 				95F52B1B29477DA7000C1555 /* MastodonKit in Frameworks */,
 				95F52B1229477C12000C1555 /* CocoaLumberjackSwiftLogBackend in Frameworks */,
+				95CD3F1B29478666002C03FE /* AckGen in Frameworks */,
 				154478A6232B0223009C71D4 /* CoreTootin.framework in Frameworks */,
 				95F52B0E29477C12000C1555 /* CocoaLumberjack in Frameworks */,
 				95F52B1529477C3C000C1555 /* SVGKit in Frameworks */,
@@ -1424,6 +1430,7 @@
 			children = (
 				95F52B1829477C4B000C1555 /* Packages */,
 				95F52B082943C870000C1555 /* README.md */,
+				95CD3F21294786B9002C03FE /* Acknowledgements.plist */,
 				15C4DD0E21D41EC0002AF6DA /* Mastonaut */,
 				1512DB82221B8D030090F2BD /* Dependencies */,
 				15DE367522443FFA00480949 /* MastonautTests */,
@@ -1806,6 +1813,7 @@
 			buildConfigurationList = 15C4DD3321D41EC0002AF6DA /* Build configuration list for PBXNativeTarget "Mastonaut" */;
 			buildPhases = (
 				15FA215B229B378D00B86DC6 /* Generate Versions Header */,
+				95CD3F2029478675002C03FE /* ShellScript */,
 				15C4DD0821D41EC0002AF6DA /* Sources */,
 				15C4DD0921D41EC0002AF6DA /* Frameworks */,
 				15C4DD0A21D41EC0002AF6DA /* Resources */,
@@ -1827,6 +1835,8 @@
 				95F52B1129477C12000C1555 /* CocoaLumberjackSwiftLogBackend */,
 				95F52B1429477C3C000C1555 /* SVGKit */,
 				95F52B1A29477DA7000C1555 /* MastodonKit */,
+				95CD3F1A29478666002C03FE /* AckGen */,
+				95CD3F1C29478666002C03FE /* AckGenUI */,
 			);
 			productName = Sengi;
 			productReference = 15C4DD0C21D41EC0002AF6DA /* Mastonaut.app */;
@@ -1906,6 +1916,7 @@
 				95F52B0929477BF3000C1555 /* XCRemoteSwiftPackageReference "Starscream" */,
 				95F52B0C29477C12000C1555 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */,
 				95F52B1329477C3C000C1555 /* XCRemoteSwiftPackageReference "SVGKit" */,
+				95CD3F1929478666002C03FE /* XCRemoteSwiftPackageReference "AckGen" */,
 			);
 			productRefGroup = 15C4DD0D21D41EC0002AF6DA /* Products */;
 			projectDirPath = "";
@@ -2018,6 +2029,7 @@
 				152DA64E21E3FAE00065CC1B /* DoubleAttachmentView.xib in Resources */,
 				150A9F0121FD1B1500DF42A1 /* FollowCellView.xib in Resources */,
 				15D9DA76229F175C006AE6D4 /* EmojiCollectionViewItem.xib in Resources */,
+				95CD3F22294786B9002C03FE /* Acknowledgements.plist in Resources */,
 				15E7452422371DCB009A1252 /* AccountsPlaceholderController.xib in Resources */,
 				151E9A2D230C830500A76DB0 /* DebugWindowController.xib in Resources */,
 				15EE539022C956C8001BEA58 /* Search.storyboard in Resources */,
@@ -2138,6 +2150,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "BUNDLE_VERSION=$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' $SRCROOT/Mastonaut/Supporting\\ Files/Info.plist)\necho \"#define BUNDLE_VERSION \\\"$MARKETING_VERSION\\\"\" > $DERIVED_FILE_DIR/BundleVersions.h\n";
+		};
+		95CD3F2029478675002C03FE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nDIR=$PROJECT_TEMP_DIR/../../../SourcePackages/checkouts/AckGen\nif [ -d \"$DIR\" ]; then\n  cd $DIR\n  SDKROOT=(xcrun --sdk macosx --show-sdk-path)\n  swift run ackgen\nelse\n  echo \"warning: AckGen not found. Please install the package via SPM (https://github.com/MartinP7r/AckGen#installation)\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -3320,6 +3349,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		95CD3F1929478666002C03FE /* XCRemoteSwiftPackageReference "AckGen" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MartinP7r/AckGen";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.5;
+			};
+		};
 		95F52B0929477BF3000C1555 /* XCRemoteSwiftPackageReference "Starscream" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/daltoniam/Starscream.git";
@@ -3347,6 +3384,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		95CD3F1A29478666002C03FE /* AckGen */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95CD3F1929478666002C03FE /* XCRemoteSwiftPackageReference "AckGen" */;
+			productName = AckGen;
+		};
+		95CD3F1C29478666002C03FE /* AckGenUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95CD3F1929478666002C03FE /* XCRemoteSwiftPackageReference "AckGen" */;
+			productName = AckGenUI;
+		};
 		95F52B0A29477BF3000C1555 /* Starscream */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 95F52B0929477BF3000C1555 /* XCRemoteSwiftPackageReference "Starscream" */;

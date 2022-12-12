@@ -17,6 +17,7 @@
 //  GNU General Public License for more details.
 //
 
+import AckGen
 import Cocoa
 
 class AcknowledgementsWindowController: NSWindowController
@@ -36,17 +37,19 @@ class AcknowledgementsWindowController: NSWindowController
 		{
 			[weak textView] in
 
-			let acknowledgements = Acknowledgements.load(plist: "Pods-Mastonaut-acknowledgements")
-			let acknowledgementsString = acknowledgements?.makeAttributedString()
+			let acknowledgements = Acknowledgement.all()
+				.map { element in Acknowledgements.Entry(title: element.title, text: element.license) }
+			let acknowledgementsString = Acknowledgements(entries: acknowledgements).makeAttributedString()
+
 
 			DispatchQueue.main.async
 			{
-				guard let textView = textView, let string = acknowledgementsString else
+				guard let textView = textView else
 				{
 					return
 				}
 
-				textView.textStorage?.setAttributedString(string)
+				textView.textStorage?.setAttributedString(acknowledgementsString)
 			}
 		}
 	}
